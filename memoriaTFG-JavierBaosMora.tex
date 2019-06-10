@@ -61,9 +61,9 @@
 \addto\shorthandsspanish{\spanishdeactivate{~<>}}
 
 \begin{document}
-\global\long\def\refname{Bibliograf\acute{\imath}a}%
+\global\long\def\refname{Bibliografía}%
  %% Renombrando
-\global\long\def\appendixname{Ap\acute{e}ndice}%
+\global\long\def\appendixname{Apéndice}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PORTADA
@@ -77,7 +77,7 @@
 \textsf{\Huge{}REY JUAN CARLOS}{\Huge{} }\tabularnewline
 \end{tabular}\tabularnewline
 \end{tabular}\par \vspace{3cm}
-\par \Large GRADO EN INGENIERIA DE SISTEMAS AUDIOVISUALES Y MULTIME\par \vspace{0.4cm}
+\par \Large GRADO EN INGENIERÍA DE SISTEMAS AUDIOVISUALES Y MULTIMEDIA\par \vspace{0.4cm}
 \par \large Curso Académico 2011/2012\par \vspace{0.8cm}
 \par Trabajo Fin de Grado\par \vspace{2.5cm}
 \par \LARGE SISTEMA DE ALERTING PARA ARQUITECTURA DE PREVENTIVOS\par \vspace{4cm}
@@ -115,7 +115,7 @@
 {\large{}\vspace{1cm}
  La defensa del presente Proyecto Fin de Carrera se realizó el día
 \qquad{}$\;\,$ de \qquad{}\qquad{}\qquad{}\qquad{}}\\
-{\large{}de 20XX, siendo calificada por el siguiente tribunal:}{\large\par}
+{\large{}de 20XXI, siendo calificada por el siguiente tribunal:}{\large\par}
 
 {\large{}\vspace{0.5cm}
  }\textbf{\large{}Presidente:}{\large\par}
@@ -136,7 +136,7 @@
  }{\large\par}
 \begin{flushright}
 {\large{}Fuenlabrada, a \qquad{}$\;\,$ de \qquad{}\qquad{}\qquad{}\qquad{}de
-20XX }{\large\par}
+20XXI }{\large\par}
 \par\end{flushright}
 
 {\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,11 +173,11 @@ sí.}{\large\par}
 {\large{}%\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado}{\large\par}
 
-{\large{}En esta memoria se presenta una solución de mantenimiento
+{\large{}En este proyecto se presenta una solución de mantenimiento
 de red, con el objetivo de evitar o mitigar las consecuencias de los
 fallos de un equipo, logrando en algunos casos prevenir las incidencias
 antes de que estas sucedan. La solución es perfectamente aplicable
-a cualquier capa de red y probada en la realidad.}{\large\par}
+a cualquier capa de red y y ha sido probada en la realidad.}{\large\par}
 
 {\large{}El sistema está basado en tres módulos: base de datos, capa
 de visualización y módulo de alertas. Se probaron distintas soluciones
@@ -238,13 +238,13 @@ de cuál sería mi función y acepte el nuevo reto. Novedoso y revolucionario,
 se planteaba una nueva forma de mantener la red.}{\large\par}
 
 {\large{}A mi llegada, se empleaban diversas herramientas de monitorización
-de diferentes vendors. Estas eran cerradas, con poca escalabilidad
+de diferentes \emph{vendors}. Estas eran cerradas, con poca escalabilidad
 y escasa utilidad en tiempo real. Ante una incidencia surgía la necesidad
 de una herramienta ágil, la cual permitiera generar indicadores de
 gestión (KPIs) o monitorizar distintos sistemas en momentos concretos
 sin dependencias externas. En paralelo se estaba montando una solución
 a todos estos problemas basada en herramientas Open Source llamadas
-Graphite y Grafana con una carencia, la capa de alerting. Cubrir esta
+Graphite y Grafana con una carencia, la capa de \emph{alterting}. Cubrir esta
 carencia y ayudar a la implantación de dicha solución global era mi
 acometido.}{\large\par}
 
@@ -254,17 +254,17 @@ acometido.}{\large\par}
 
 {\large{}Orange se caracteriza por tener una red muy compleja debido
 a las adquisiciones de distintas empresas (ya.com, amena, Jazztel,\dots )
-y por consecuencia sus redes. Es una red heterogénea, multitud de
-equipos y vendors con sus diferentes elementos de gestión y monitorización.}{\large\par}
+y, en consecuencia, sus redes. Por tanto, nos encontramos con una red heterogénea, multitud de
+equipos y \emph{vendors} con sus diferentes elementos de gestión y monitorización.}{\large\par}
 
 {\large{}Cada capa de red e incluso dentro de una misma capa se monitoriza
 de forma diferente y con un elemento distinto. Esto dificulta la mucho
-el troubleshooting entre capas, una visión E2E (End to End) de servicio
-e incluso los postmorten de las incidencias.}{\large\par}
+el \emph{troubleshooting} entre capas, una visión E2E (End to End) de servicio
+e incluso los \emph{post-mortem} de las incidencias.}{\large\par}
 
-{\large{}Conseguir unificar y centralizar toda la información permitirá
+{\large{}La unificación y centralización de toda la información permitirá
 correlar alarmas de diversas capas de red sacando KPIs de servicio.
-Los cuales, cuando notemos una degradación, generarán alertas preventivas.}{\large\par}
+Y cuando se identifique una degradación, se generarán alertas preventivas.}{\large\par}
 
 \section{Open Source}
 
@@ -384,7 +384,7 @@ automática) se muestran los objetivos del proyecto.}{\large\par}
 {\large{}Mi trabajo fin de grado consiste en montar una solución de
 monitorización para la capa de PS (Packet Switching) extensible a
 otras capas, escalable e intuitivo cara al usuario en el tiempo límite
-de duración de la beca, 3 meses.}{\large\par}
+de duración de la beca (3 meses).}{\large\par}
 
 \section{Objetivos específicos}
 
@@ -415,11 +415,11 @@ para que el usuario puede encontrar aquello que busca con facilidad,
 a diferencia de lo que le sucedería si todos los datos estuvieran
 mezclados y sin ningún tipo de orden. Centrándonos en la velocidad
 de consulta y la flexibilidad para expandirlas y relacionar las tablas.}{\large\par}
-\item {\large{}Lógica de la herramienta. Acotar la funcionalidades de la
-herramienta, tener claro el para, el que y el cómo.}{\large\par}
-\item {\large{}Diseño gráfico del aplicativo. Decidir el diseño gráfico
+\item {\large{}Definir la lógica de la herramienta. Acotar la funcionalidades de la
+herramienta, tener claro el para, el qué y el cómo.}{\large\par}
+\item {\large{}Diseñare gráficamente la aplicación. Decidir el diseño gráfico
 buscando siempre una aplicación sencilla, rápida e intuitiva.}{\large\par}
-\item {\large{}Puesta en marcha. Transferir a mantenimiento, procedimientos
+\item {\large{}Poner en marcha la aplicación. Transferir a mantenimiento, procedimientos
 de backup y sesiones de formación de uso de la herramienta. Orange
 cuenta con una media de edad alta en la plantilla poco habituada a
 utilizar este tipo de aplicativos, entra un proceso de cambio cultural.}{\large\par}
@@ -458,14 +458,14 @@ por ejemplo, una para indicarte que visite la página de LibreSoft}\footnote{{\la
 
 {\large{}\label{sec:Graphite}}{\large\par}
 
-{\large{}Es una herramienta de monitorización válida tanto para infraestructuras
+{\large{}Graphite es una herramienta de monitorización válida tanto para infraestructuras
 físicas o cloud. Graphite se utiliza para realizar un seguimiento
 del rendimiento de sitios web, aplicaciones, servicios y servidores
 de red. Marcó el inicio de una nueva generación de herramientas de
 monitorización, haciendo más fácil almacenar, recuperar, compartir
 y visualizar datos de time-series.}{\large\par}
 
-{\large{}Consiste en tres componentes software:}{\large\par}
+{\large{}Graphite consiste en tres componentes software:}{\large\par}
 \begin{itemize}
 \item {\large{}Carbon: Servicio de alto rendimiento que escucha datos de
 time-series.}{\large\par}
@@ -507,7 +507,7 @@ usuario multitud de posibilidades de forma muy intiutiva.}{\large\par}
 
 {\large{}\label{sec:django}}{\large\par}
 
-{\large{}Es un framework de aplicaciones web gratuito y de código
+{\large{}Django es un framework de aplicaciones web gratuito y de código
 abierto (open source) escrito en Python basado en el diseño Modelo-Vista-Template.}{\large\par}
 
 {\large{}Diseñado para ayudar a los desarrolladores a llevar las aplicaciones
@@ -666,13 +666,13 @@ con un sistema centralizado de gestión de datos, que permite realizar
 cambios en un solo archivo y que se ejecuta en toda la estructura
 de datos que se comparte en la red.}{\large\par}
 
-{\large{}}
-\begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img08-EstructuraMysql}
-\caption{Ejemplo estructura Mysql}
-\label{figura:Estructura_Mysql}}
-\end{figure}
-{\large\par}
+%{\large{}}
+%\begin{figure}
+%{\large{}\centering \includegraphics[width=12cm]{img/img08-EstructuraMysql}
+%\caption{Ejemplo estructura Mysql}
+%\label{figura:Estructura_Mysql}}
+%\end{figure}
+%{\large\par}
 
 \section{API}
 
@@ -739,8 +739,8 @@ front-end.}{\large\par}
 
 {\large{}\label{sec:hardware}}{\large\par}
 
-{\large{}Por motivos económicos se decide reutilizar el hardware de
-otra plataforma formada por 3 servidores DELL PowerEdge R630.}{\large\par}
+{\large{}Por motivos económicos, se decide reutilizar el hardware de
+otra plataforma formada por tres servidores DELL PowerEdge R630.}{\large\par}
 
 {\large{}}
 \begin{figure}
@@ -1009,8 +1009,8 @@ es alarmada siguiendo el siguiente diagrama:}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img18-DiagramaLogica}
-\caption{Diagrama Logico}
+{\large{}\centering \includegraphics[width=16cm]{img/img18-DiagramaLogica}
+\caption{Diagrama Lógico}
 \label{fig:Diagrama_Logico}}
 \end{figure}
 {\large\par}
@@ -1049,7 +1049,7 @@ y sus posibles extensiones, asociado a su vista correspondiente.}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img19-urls}
+{\large{}\centering \includegraphics[width=12cm]{img/img19-urls}
 \caption{urls.py}
 \label{fig:urls.py}}
 \end{figure}
@@ -1069,7 +1069,7 @@ un error 404.}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img20-dashboard}
+{\large{}\centering \includegraphics[width=12cm]{img/img20-dashboard}
 \caption{Dashboard}
 \label{fig:dashboard}}
 \end{figure}
@@ -1088,15 +1088,15 @@ deseados para alarmas warning, major y critical.}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img21-NuevaMetricaSeleccionDash}
-\caption{Seleccion Dashboard}
+{\large{}\centering \includegraphics[width=12cm]{img/img21-NuevaMetricaSeleccionDash}
+\caption{Selección Dashboard}
 \label{fig:Nueva_Metrica_Seleccion_Dashboard}}
 \end{figure}
 {\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img22-NuevaMetricaSeleccionPanel}
+{\large{}\centering \includegraphics[width=12cm]{img/img22-NuevaMetricaSeleccionPanel}
 \caption{Seleccion Panel}
 \label{fig:Nueva_Metrica_Seleccion_Panel}}
 \end{figure}
@@ -1104,7 +1104,7 @@ deseados para alarmas warning, major y critical.}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img23-NuevaMetricaSeleccionMetrica}
+{\large{}\centering \includegraphics[width=12cm]{img/img23-NuevaMetricaSeleccionMetrica}
 \caption{Seleccion Metrica}
 \label{fig:Nueva_Metrica_Seleccion_Metrica}}
 \end{figure}
@@ -1112,7 +1112,7 @@ deseados para alarmas warning, major y critical.}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img24-NuevaMetricaComboUmbrales}
+{\large{}\centering \includegraphics[width=12cm]{img/img24-NuevaMetricaComboUmbrales}
 \caption{Combo Umbrales}
 \label{fig:Nueva_Metrica_Combo_Umbrales}}
 \end{figure}
@@ -1127,7 +1127,7 @@ interior) o la supresión de la misma (círculo rojo con x).}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img25-ListadoMetricas}
+{\large{}\centering \includegraphics[width=12cm]{img/img25-ListadoMetricas}
 \caption{Listado métricas configuradas}
 \label{fig:Listado_Metricas}}
 \end{figure}
@@ -1142,7 +1142,7 @@ con líneas blancas) y configuraríamos los parámetros.}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img26-Templates}
+{\large{}\centering \includegraphics[width=12cm]{img/img26-Templates}
 \caption{Vista principal templates}
 \label{fig:Templates}}
 \end{figure}
@@ -1150,7 +1150,7 @@ con líneas blancas) y configuraríamos los parámetros.}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img27-TemplatesCombo}
+{\large{}\centering \includegraphics[width=12cm]{img/img27-TemplatesCombo}
 \caption{Combo parámetros templates}
 \label{fig:Templates_Combo_Parametros}}
 \end{figure}
@@ -1174,7 +1174,7 @@ para que la métrica sea cesada.
 \end{itemize}
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img28-ConfigurarAlarmas}
+{\large{}\centering \includegraphics[width=12cm]{img/img28-ConfigurarAlarmas}
 \caption{Vista del configurador de alarmas}
 \label{fig:Configurar_Alarmas}}
 \end{figure}
@@ -1188,7 +1188,7 @@ de la alarma y fecha y hora de fin de la alarma.}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img29-HistoricoAlarmas}
+{\large{}\centering \includegraphics[width=12cm]{img/img29-HistoricoAlarmas}
 \caption{Vista de histórico alarmas}
 \label{fig:Historico_Alarmas}}
 \end{figure}
@@ -1220,7 +1220,7 @@ forma parte de una clase en el forms.py.}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img31-Forms}
+{\large{}\centering \includegraphics[width=12cm]{img/img31-Forms}
 \caption{forms.py}
 \label{fig:Forms}}
 \end{figure}
@@ -1231,7 +1231,7 @@ cronología dividida en semanas :}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img32-Cronologia}
+{\large{}\centering \includegraphics[width=12cm]{img/img32-Cronologia}
 \caption{Cronologia}
 \label{fig:Cronologia}}
 \end{figure}
@@ -1253,7 +1253,7 @@ en la que aún continuamos aplicando un sistema DevOps.}{\large\par}
 
 {\large{}}
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img33-DevOps}
+{\large{}\centering \includegraphics[width=12cm]{img/img33-DevOps}
 \caption{Diagrama DevOps}
 \label{fig:DevOps}}
 \end{figure}
@@ -1343,7 +1343,8 @@ TFGs/TFMs.}{\large\par}
 
 
 \appendix
-{\large{}%dummy comment inserted by tex2lyx to ensure that this paragraph is not empty}{\large\par}
+{\large{} %dummy comment inserted by tex2lyx to ensure that this paragraph is not empty
+}{\large\par}
 
 \chapter{Manual de usuario}
 
