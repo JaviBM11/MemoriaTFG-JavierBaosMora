@@ -7,7 +7,6 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 \usepackage{textcomp}
-\usepackage{url}
 \usepackage{graphicx}
 
 \makeatletter
@@ -55,16 +54,22 @@
 
 
 
+
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+
 \makeatother
 
 \usepackage{babel}
 \addto\shorthandsspanish{\spanishdeactivate{~<>}}
 
 \begin{document}
-\global\long\def\refname{Bibliografía}%
- %% Renombrando
-\global\long\def\appendixname{Apéndice}%
-
+\global\long\def\refname{Bibliograf\acute{\imath}a}%
+%% Renombrando
+\global\long\def\appendixname{Ap\acute{e}ndice}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PORTADA
 
@@ -73,15 +78,15 @@
 %\includegraphics[bb=0 0 194 352, scale=0.25]{logo} &
 \includegraphics[scale=0.25]{img/logo_vect}  & %
 \begin{tabular}[b]{l}
-\textsf{\Huge{}UNIVERSIDAD}{\Huge{} }\tabularnewline
-\textsf{\Huge{}REY JUAN CARLOS}{\Huge{} }\tabularnewline
+\textsf{\Huge{}{}UNIVERSIDAD}{\Huge{}{} }\tabularnewline
+\textsf{\Huge{}{}REY JUAN CARLOS}{\Huge{}{} }\tabularnewline
 \end{tabular}\tabularnewline
 \end{tabular}\par \vspace{3cm}
-\par \Large GRADO EN INGENIERÍA DE SISTEMAS AUDIOVISUALES Y MULTIMEDIA\par \vspace{0.4cm}
-\par \large Curso Académico 2011/2012\par \vspace{0.8cm}
-\par Trabajo Fin de Grado\par \vspace{2.5cm}
-\par \LARGE SISTEMA DE ALERTING PARA ARQUITECTURA DE PREVENTIVOS\par \vspace{4cm}
-\par \large Autor : Javier Baos Mora\\
+ \par \Large GRADO EN INGENIERÍA DE SISTEMAS AUDIOVISUALES Y MULTIMEDIA\par \vspace{0.4cm}
+ \par \large Curso Académico 2011/2012\par \vspace{0.8cm}
+ \par Trabajo Fin de Grado\par \vspace{2.5cm}
+ \par \LARGE SISTEMA DE ALERTING PARA ARQUITECTURA DE PREVENTIVOS\par \vspace{4cm}
+ \par \large Autor : Javier Baos Mora\\
  Tutor : Dr. Gregorio Robles \end{center} \end{titlepage}
 
 \newpage{}%
@@ -91,144 +96,197 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Para firmar
-\clearpage\pagenumbering{gobble} 
+\clearpage\pagenumbering{gobble}
 
 \chapter*{}
 
 \vspace{-4cm}
+
+\begin{center}
+\textbf{\LARGE{}{}Trabajo Fin de Grado}{\LARGE\par}
+\par\end{center}
+
+\begin{center}
  
-\begin{center}
-\textbf{\LARGE{}Trabajo Fin de Grado}{\LARGE\par}
 \par\end{center}
 
 \begin{center}
-{\LARGE{}\vspace{1cm}
- }{\large{}Sistema de Alerting para Arquitectura de Preventivos}{\large\par}
+{\LARGE{}{}\vspace{1cm}
+ }{\large{}{}Sistema de Alerting para Arquitectura de Preventivos}{\large\par}
 \par\end{center}
 
 \begin{center}
-{\large{}\vspace{1cm}
- }\textbf{\large{}Autor :}{\large{} Javier Baos Mora}\\
-{\large{} }\textbf{\large{}Tutor :}{\large{} Dr. Gregorio Robles Martínez}{\large\par}
+ 
 \par\end{center}
 
-{\large{}\vspace{1cm}
+\begin{center}
+{\large{}{}\vspace{1cm}
+ }\textbf{\large{}{}Autor :}{\large{}{} Javier Baos Mora}\\
+ {\large{}{} }\textbf{\large{}{}Tutor :}{\large{}{} Dr. Gregorio
+Robles Martínez}{\large\par}
+\par\end{center}
+
+\begin{center}
+ 
+\par\end{center}
+
+{\large{}{}\vspace{1cm}
  La defensa del presente Proyecto Fin de Carrera se realizó el día
 \qquad{}$\;\,$ de \qquad{}\qquad{}\qquad{}\qquad{}}\\
-{\large{}de 20XXI, siendo calificada por el siguiente tribunal:}{\large\par}
+ {\large{}{}de 20XXI, siendo calificada por el siguiente tribunal:}{\large\par}
 
-{\large{}\vspace{0.5cm}
- }\textbf{\large{}Presidente:}{\large\par}
+{\large{}{}\vspace{0.5cm}
+ }\textbf{\large{}{}Presidente:}{\large\par}
 
-{\large{}\vspace{1.2cm}
- }\textbf{\large{}Secretario:}{\large\par}
+{\large{}{}\vspace{1.2cm}
+ }\textbf{\large{}{}Secretario:}{\large\par}
 
-{\large{}\vspace{1.2cm}
- }\textbf{\large{}Vocal:}{\large\par}
+{\large{}{}\vspace{1.2cm}
+ }\textbf{\large{}{}Vocal:}{\large\par}
 
-{\large{}\vspace{1.2cm}
+{\large{}{}\vspace{1.2cm}
  y habiendo obtenido la siguiente calificación:}{\large\par}
 
-{\large{}\vspace{1cm}
- }\textbf{\large{}Calificación:}{\large\par}
+{\large{}{}\vspace{1cm}
+ }\textbf{\large{}{}Calificación:}{\large\par}
 
-{\large{}\vspace{1cm}
+{\large{}{}\vspace{1cm}
  }{\large\par}
+
+ 
 \begin{flushright}
-{\large{}Fuenlabrada, a \qquad{}$\;\,$ de \qquad{}\qquad{}\qquad{}\qquad{}de
+{\large{}{}Fuenlabrada, a \qquad{}$\;\,$ de \qquad{}\qquad{}\qquad{}\qquad{}de
 20XXI }{\large\par}
 \par\end{flushright}
 
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Dedicatoria}{\large\par}
+\begin{flushright}
+ 
+\par\end{flushright}
+
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Dedicatoria}{\large\par}}{\large\par}
 
 \chapter*{}
 
-{\large{}\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+{\large{}{}\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
 }{\large\par}
+
+{\large{} }{\large\par}
+
+\textit{\large{}{}\textquotedblleft The first step is to establish
+that something is possible then probability will occur.\textquotedblright{}
+- Elon Musk}{\large\par}
 \begin{flushright}
-\textit{\large{}Dedicado a }\\
-\textit{\large{} mi familia / mi abuelo / mi abuela}{\large{} }{\large\par}
+\textit{\large{}{}Dedicado a }{\large{}}\\
+{\large{} }\textit{\large{}{} mi familia y futura muje}{\large{}r{} }{\large\par}
 \par\end{flushright}
 
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Agradecimientos}{\large\par}
+\begin{flushright}
+{\large{} }{\large\par}
+\par\end{flushright}
+
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Agradecimientos}{\large\par}}{\large\par}
 
 \chapter*{Agradecimientos}
 
-{\large{}%\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
-\markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado }{\large\par}
+{\large{}{}%\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
+\markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado }{\large\par}}{\large\par}
 
-{\large{}Aquí vienen los agradecimientos\ldots Aunque está bien acordarse
-de la pareja, no hay que olvidarse de dar las gracias a tu madre,
-que aunque a veces no lo parezca disfrutará tanto de tus logros como
-tú\ldots Además, la pareja quizás no sea para siempre, pero tu madre
-sí.}{\large\par}
+{\large{}{}Agradezco a, mi madre, mi padre y hermanos por la paciencia
+y confianza depositada en mi a lo largo de este largo y duro camino.}{\large\par}
 
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Resumen}{\large\par}
+{\large{}{}Agradezco a, mi futura mujer por su perseverancia e inteligencia,
+por estar siempre ayudándome a quitar cada piedra del camino.}{\large\par}
+
+{\large{}{}Agradezco a, mis abuelas por sentirse siempre orgullosas.}{\large\par}
+
+{\large{}{}Agradezco a, mis compañeros de biblioteca por amenizar
+las tardes de verano e invierno.}{\large\par}
+
+{\large{}{}Agradezco a, mis compañeros de trabajo por ser siempre
+un pozo sin fondo de conocimiento.}{\large\par}
+
+{\large{}{}Por último, y no menos importante. Agradezco a, mi tutor
+por ayudarme a escribir el final de este capítulo.}{\large\par}
+
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Resumen}{\large\par}}{\large\par}
 
 \chapter*{Resumen}
 
-{\large{}%\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
-\markboth{RESUMEN}{RESUMEN} % encabezado}{\large\par}
+{\large{}{}%\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
+\markboth{RESUMEN}{RESUMEN} % encabezado}{\large\par}}{\large\par}
 
-{\large{}En este proyecto se presenta una solución de mantenimiento
+{\large{}{}En este proyecto se presenta una solución de mantenimiento
 de red, con el objetivo de evitar o mitigar las consecuencias de los
 fallos de un equipo, logrando en algunos casos prevenir las incidencias
 antes de que estas sucedan. La solución es perfectamente aplicable
 a cualquier capa de red y y ha sido probada en la realidad.}{\large\par}
 
-{\large{}El sistema está basado en tres módulos: base de datos, capa
-de visualización y módulo de alertas. Se probaron distintas soluciones
+{\large{}{}El sistema está basado en tres módulos: base de datos,
+capa de visualización y módulo de alertas. Se probaron distintas soluciones
 software para cada módulo, optándose finalmente por: Graphite como
 base de datos, Grafana en la capa de visualización y Gralarmas (desarrollo
 propio en Django) como sistema de alertas.}{\large\par}
 
-{\large{}Este proyecto surgió ante la necesidad de la empresa Orange
+{\large{}{}Este proyecto surgió ante la necesidad de la empresa Orange
 de evolucionar hacia un sistema de monitorización flexible, centralizada,
 basada en el tiempo real y escalable. En la actualidad, el sistema
 está en continuo desarrollo añadiéndose nuevas funcionalidades.}{\large\par}
 
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Resumen en inglés}{\large\par}
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Resumen en inglés}{\large\par}}{\large\par}
 
 \chapter*{Summary}
 
-{\large{}%\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
-\markboth{SUMMARY}{SUMMARY} % encabezado}{\large\par}
+{\large{}{}%\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
+\markboth{SUMMARY}{SUMMARY} % encabezado}{\large\par}}{\large\par}
 
-{\large{}Here comes a translation of the ``Resumen'' into English.
-Please, double check it for correct grammar and spelling. As it is
-the translation of the ``Resumen'', which is supposed to be written
-at the end, this as well should be filled out just before submitting.}{\large\par}
+{\large{}{}This project presents a network maintenance solution,
+with the aim of avoiding or mitigating the consequences of equipment
+failures, achieving in some cases to prevent incidents before they
+happen. The solution is perfectly applicable to any network layer
+and has been tested in reality.}{\large\par}
 
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large{}{}The system is based on three modules: database, visualization
+layer and alert module. Different software solutions for each module
+were tested and finally opted for: Graphite as database, Grafana in
+the visualization layer and Gralarmas (own development in Django)
+as alert system.}{\large\par}
+
+{\large{}{}This project was born out of Orange's need to evolve towards
+a flexible, centralized, real-time-based and scalable monitoring system.
+At present, the system is in continuous development adding new functionalities.}{\large\par}
+
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ÍNDICES %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}}{\large\par}
 
-{\large{}% Las buenas noticias es que los índices se generan automáticamente.
+{\large{}{}% Las buenas noticias es que los índices se generan automáticamente.
 % Lo único que tienes que hacer es elegir cuáles quieren que se generen,
-% y comentar/descomentar esa instrucción de LaTeX.}{\large\par}
+% y comentar/descomentar esa instrucción de LaTeX.}{\large\par}}{\large\par}
 
-{\large{}%%%% Índice de contenidos
+{\large{}{}%%%% Índice de contenidos
 \tableofcontents{}\cleardoublepage\listoffigures
 }{\large\par}
 
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % INTRODUCCIÓN %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}}{\large\par}
 
-{\large{}\cleardoublepage}{\large\par}
+{\large{}{}\cleardoublepage}{\large\par}
 
 \chapter{Introducción y motivación}
 
-{\large{}\label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
-\pagenumbering{arabic} % para empezar la numeración de página con números}{\large\par}
+{\large{}\label{chap:introduccion}}{\large\par}
 
-{\large{}Ejerciendo de becario en la empresa Orange España a media
+{\large{}{}\label{sec:introduccion} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
+\pagenumbering{arabic} % para empezar la numeración de página con números}{\large\par}}{\large\par}
+
+{\large{}{}Ejerciendo de becario en la empresa Orange España a media
 jornada en los departamentos de Despliegue Fijo y Planificación durante
 un año cuando me ofrecieron una nueva beca con objetivos más ambiciosos
 en el departamento de Operación y Mantenimiento. En la entrevista
@@ -237,40 +295,43 @@ los conocimientos sobre Python y Django, eso me hacía tener una idea
 de cuál sería mi función y acepte el nuevo reto. Novedoso y revolucionario,
 se planteaba una nueva forma de mantener la red.}{\large\par}
 
-{\large{}A mi llegada, se empleaban diversas herramientas de monitorización
-de diferentes \emph{vendors}. Estas eran cerradas, con poca escalabilidad
-y escasa utilidad en tiempo real. Ante una incidencia surgía la necesidad
-de una herramienta ágil, la cual permitiera generar indicadores de
-gestión (KPIs) o monitorizar distintos sistemas en momentos concretos
-sin dependencias externas. En paralelo se estaba montando una solución
-a todos estos problemas basada en herramientas Open Source llamadas
-Graphite y Grafana con una carencia, la capa de \emph{alterting}. Cubrir esta
-carencia y ayudar a la implantación de dicha solución global era mi
-acometido.}{\large\par}
+{\large{}{}A mi llegada, se empleaban diversas herramientas de monitorización
+de diferentes }\emph{\large{}vendors}{\large{}. Estas eran cerradas,
+con poca escalabilidad y escasa utilidad en tiempo real. Ante una
+incidencia surgía la necesidad de una herramienta ágil, la cual permitiera
+generar indicadores de gestión (KPIs) o monitorizar distintos sistemas
+en momentos concretos sin dependencias externas. En paralelo se estaba
+montando una solución a todos estos problemas basada en herramientas
+Open Source llamadas Graphite y Grafana con una carencia, la capa
+de }\emph{\large{}alterting}{\large{}. Cubrir esta carencia y ayudar
+a la implantación de dicha solución global era mi acometido.}{\large\par}
 
 \section{Contexto}
 
-{\large{}\label{sec:contexto}}{\large\par}
+{\large{}{}\label{sec:contexto}}{\large\par}
 
-{\large{}Orange se caracteriza por tener una red muy compleja debido
+{\large{}{}Orange se caracteriza por tener una red muy compleja debido
 a las adquisiciones de distintas empresas (ya.com, amena, Jazztel,\dots )
-y, en consecuencia, sus redes. Por tanto, nos encontramos con una red heterogénea, multitud de
-equipos y \emph{vendors} con sus diferentes elementos de gestión y monitorización.}{\large\par}
+y, en consecuencia, sus redes. Por tanto, nos encontramos con una
+red heterogénea, multitud de equipos y }\emph{\large{}vendors}{\large{}
+con sus diferentes elementos de gestión y monitorización.}{\large\par}
 
-{\large{}Cada capa de red e incluso dentro de una misma capa se monitoriza
-de forma diferente y con un elemento distinto. Esto dificulta la mucho
-el \emph{troubleshooting} entre capas, una visión E2E (End to End) de servicio
-e incluso los \emph{post-mortem} de las incidencias.}{\large\par}
+{\large{}{}Cada capa de red e incluso dentro de una misma capa se
+monitoriza de forma diferente y con un elemento distinto. Esto dificulta
+la mucho el }\emph{\large{}troubleshooting}{\large{} entre capas,
+una visión E2E (End to End) de servicio e incluso los }\emph{\large{}post-mortem}{\large{}
+de las incidencias.}{\large\par}
 
-{\large{}La unificación y centralización de toda la información permitirá
-correlar alarmas de diversas capas de red sacando KPIs de servicio.
-Y cuando se identifique una degradación, se generarán alertas preventivas.}{\large\par}
+{\large{}{}La unificación y centralización de toda la información
+permitirá correlar alarmas de diversas capas de red sacando KPIs de
+servicio. Y cuando se identifique una degradación, se generarán alertas
+preventivas.}{\large\par}
 
 \section{Open Source}
 
-{\large{}\label{sec:open-source}}{\large\par}
+{\large{}{}\label{sec:open-source}}{\large\par}
 
-{\large{}Sin presupuesto para el proyecto, más allá de mi contratación
+{\large{}{}Sin presupuesto para el proyecto, más allá de mi contratación
 como becario, nos planteamos una solución desarrollada internamente
 basada en código abierto (Open Source). El código abierto es un modelo
 de desarrollo de software basado en la colaboración abierta. Se enfoca
@@ -281,355 +342,410 @@ software de manera gratuita. Además, el echo de estar respaldado por
 una comunidad garantiza la continua evolución de las herramientas
 de una forma ágil.}{\large\par}
 
-{\large{}Las herramientas finalmente utilizadas fueron:}{\large\par}
+{\large{}{}Las herramientas finalmente utilizadas fueron:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}Graphite: fue diseñado y escrito originalmente por Chris
+\item {\large{}{}Graphite: fue diseñado y escrito originalmente por Chris
 Davis en Orbitz en 2006 como un proyecto paralelo que finalmente se
 convirtió en su herramienta de monitorización fundamental. En 2008,
 Orbitz permitió que Graphite se lanzara bajo la licencia de código
 abierto Apache 2.0.}{\large\par}
-\item {\large{}Grafana: cuyos slogans \textquotedblleft The open platform
-for beautiful analytics and monitoring\textquotedblright{} y \textquotedblleft The
-leading open source software for time series analytics\textquotedblright{}
-dan indicios sobre su filosofía.}{\large\par}
-\item {\large{}Django: framework escrito en Python de código abierto.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Grafana: cuyos slogans ``The open platform for beautiful
+analytics and monitoring'' y ``The leading open source software
+for time series analytics'' dan indicios sobre su filosofía.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Django: framework escrito en Python de código abierto.}{\large\par}
+
 \end{itemize}
-
-\subsection{Estilo}
-
-{\large{}\label{subsec:estilo}}{\large\par}
-
-{\large{}Recomiendo leer los consejos prácticos sobre LaTeX de Diomidos
-Spinellis}\footnote{{\large{}\url{https://github.com/dspinellis/latex-advice}}}{\large{}.}{\large\par}
-
-{\large{}Sobre el uso de las comas}\footnote{{\large{}\url{http://narrativabreve.com/2015/02/opiniones-de-un-corrector-de-estilo-11-recetas-para-escribir-correctamente-la-coma.html}}}{\large\par}
-
-{\large{}A continuación, viene una figura, la Figura~\ref{figura:foro_hilos}.
-Observarás que el texto dentro del a referencia es el identificador
-de la figura (que se corresponden con el ``label'' dentro de la
-misma). También habrás tomado nota de cómo se ponen las ``comillas
-dobles'' para que se muestren correctamente. Volviendo a las referencias,
-nota que al compilar, la primera vez se crea un diccionario con las
-referencias, y en la segunda compilación se ``rellenan'' estas referencias.
-Por eso hay que compilar dos veces.}{\large\par}
-
-{\large{}}
-\begin{figure}
-{\large{}\centering \includegraphics[width=12cm,keepaspectratio]{img/foro1}
-\caption{Página con enlaces a hilos}
-\label{figura:foro_hilos} }
-\end{figure}
-{\large\par}
-
-\begin{verbatim}
-    From gaurav at gold-solutions.co.uk  Fri Jan 14 14:51:11 2005
-    From: gaurav at gold-solutions.co.uk (gaurav_gold)
-    Date: Fri Jan 14 19:25:51 2005
-    Subject: [Mailman-Users] mailman issues
-    Message-ID: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-
-    Dear Sir/Madam,
-    How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-    Thanks
-
-    From msapiro at value.net  Fri Jan 14 19:48:51 2005
-    From: msapiro at value.net (Mark Sapiro)
-    Date: Fri Jan 14 19:49:04 2005
-    Subject: [Mailman-Users] mailman issues
-    In-Reply-To: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-    Message-ID: <PC173020050114104851057801b04d55@msapiro>
-
-    gaurav_gold wrote:
-    >How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-
-    See the FAQ
-    >Mailman FAQ: http://www.python.org/cgi-bin/faqw-mm.py
-    article 3.11
-\end{verbatim}
 
 \section{Estructura de la memoria}
 
-{\large{}\label{sec:estructura}}{\large\par}
+{\large{}{}\label{sec:estructura}}{\large\par}
 
-{\large{}En esta sección se debería introducir la esctura de la memoria.
-Así:}{\large\par}
+{\large{}{}En esta sección se introduce la esctura de la memoria:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}En el primer capítulo se hace una intro al proyecto.}{\large\par}
-\item {\large{}En el capítulo~\ref{chap:objetivos} (ojo, otra referencia
-automática) se muestran los objetivos del proyecto.}{\large\par}
-\item {\large{}A continuación se presenta el estado del arte.}{\large\par}
-\item {\large{}\ldots}{\large\par}
+\item {\large{}{}En el primer capítulo~\ref{chap:introduccion} se hace
+una introducción del proyecto, poniendo en contexto y profundizando
+en la tecnología Open Source sobre la que esta basada el proyecto.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}En el capítulo~\ref{chap:objetivos} se muestra los objetivo
+principal del proyecto y los específicos sobre los que se basó.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}A continuación se presenta el estado del arte~\ref{chap:estado_del_arte},
+en el que se describen las tecnologías que utilizadas.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Después se muestra el diseño, la implementación y el desarrollo
+\ref{chap:Dise=0000F1o_implementacion_desarrollo} de la solución.}{\large\par}
+
+\item {\large{}{}En el capítulo \ref{chap:resultados} se incluyen los
+resultados del trabajo fin de grado.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Para finalizar, se sintetizan los puntos más relevantes
+del proyecto en la conclusión.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % OBJETIVOS %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}}{\large\par}
 
-{\large{}\cleardoublepage}{\large\par}
+{\large{}{}\cleardoublepage}{\large\par}
 
 \chapter{Objetivos}
 
-{\large{}% título del capítulo (se muestra)
-\label{chap:objetivos} % identificador del capítulo (no se muestra, es para poder referenciarlo)}{\large\par}
+{\large{}{}% título del capítulo (se muestra)
+\label{chap:objetivos} % identificador del capítulo (no se muestra, es para poder referenciarlo)}{\large\par}}{\large\par}
 
 \section{Objetivo general}
 
-{\large{}% título de sección (se muestra)
-\label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)}{\large\par}
+{\large{}{}% título de sección (se muestra)
+\label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)}{\large\par}}{\large\par}
 
-{\large{}Mi trabajo fin de grado consiste en montar una solución de
-monitorización para la capa de PS (Packet Switching) extensible a
-otras capas, escalable e intuitivo cara al usuario en el tiempo límite
-de duración de la beca (3 meses).}{\large\par}
+{\large{}{}Mi trabajo fin de grado consiste en montar una solución
+de monitorización para la capa de PS (Packet Switching) extensible
+a otras capas, escalable e intuitivo cara al usuario en el tiempo
+límite de duración de la beca (3 meses).}{\large\par}
 
 \section{Objetivos específicos}
 
-{\large{}\label{sec:objetivos-especificos}}{\large\par}
+{\large{}{}\label{sec:objetivos-especificos}}{\large\par}
 
-{\large{}Al inicio, el proyecto se dividió en subobjetivos tangibles,
+{\large{}{}Al inicio, el proyecto se dividió en subobjetivos tangibles,
 alcanzables, sintiéndome con ganas, motivación y herramientas para
 llevarlo a cabo:}{\large\par}
 \begin{enumerate}
-\item {\large{}Decidir, instalar y configurar Hardware. Decidir el hardware
+\item {\large{}{}Decidir, instalar y configurar Hardware. Decidir el hardware
 a utilizar, instalar en el CPD (Centro de Procesamiento de Datos)
 correspondiente y configurar con los requisitos de los aplicativos.}{\large\par}
-\item {\large{}Decidir aplicativos de monitorización. Sondear en el mercado
+
+{\large{} }{\large\par}
+\item {\large{}{}Decidir aplicativos de monitorización. Sondear en el mercado
 las herramientas de monitorización punteras y elegir la solución que
 mejor se adapte a las necesidades de proyecto.}{\large\par}
-\item {\large{}Instalar y poner a punto las herramientas en los nuevos servidores.
-Instalar y configurar de forma óptima los aplicativos seleccionados
-en los servidores instalados.}{\large\par}
-\item {\large{}Conectar y extraer la información de Graphite y Grafana.
+
+{\large{} }{\large\par}
+\item {\large{}{}Instalar y poner a punto las herramientas en los nuevos
+servidores. Instalar y configurar de forma óptima los aplicativos
+seleccionados en los servidores instalados.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Conectar y extraer la información de Graphite y Grafana.
 Decidir en que entorno se monta el sistema de alertas y sus interfaces
 con las dos fuentes de información. Realizar análisis de conectividades
 necesarias, interfaces, formatos de entrada/salida, etc.}{\large\par}
-\item {\large{}Definir la base de datos. Se conoce como base de datos al
-conjunto de informaciones que está organizado y estructurado de un
-modo específico para que su contenido pueda ser tratado y analizado
+
+{\large{} }{\large\par}
+\item {\large{}{}Definir la base de datos. Se conoce como base de datos
+al conjunto de informaciones que está organizado y estructurado de
+un modo específico para que su contenido pueda ser tratado y analizado
 de manera rápida y sencilla. Es uno de los puntos más importantes
 para que el usuario puede encontrar aquello que busca con facilidad,
 a diferencia de lo que le sucedería si todos los datos estuvieran
 mezclados y sin ningún tipo de orden. Centrándonos en la velocidad
 de consulta y la flexibilidad para expandirlas y relacionar las tablas.}{\large\par}
-\item {\large{}Definir la lógica de la herramienta. Acotar la funcionalidades de la
-herramienta, tener claro el para, el qué y el cómo.}{\large\par}
-\item {\large{}Diseñare gráficamente la aplicación. Decidir el diseño gráfico
-buscando siempre una aplicación sencilla, rápida e intuitiva.}{\large\par}
-\item {\large{}Poner en marcha la aplicación. Transferir a mantenimiento, procedimientos
-de backup y sesiones de formación de uso de la herramienta. Orange
-cuenta con una media de edad alta en la plantilla poco habituada a
-utilizar este tipo de aplicativos, entra un proceso de cambio cultural.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Definir la lógica de la herramienta. Acotar la funcionalidades
+de la herramienta, tener claro el para, el qué y el cómo.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Diseñare gráficamente la aplicación. Decidir el diseño
+gráfico buscando siempre una aplicación sencilla, rápida e intuitiva.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Poner en marcha la aplicación. Transferir a mantenimiento,
+procedimientos de backup y sesiones de formación de uso de la herramienta.
+Orange cuenta con una media de edad alta en la plantilla poco habituada
+a utilizar este tipo de aplicativos, entra un proceso de cambio cultural.}{\large\par}
+
+{\large{} }{\large\par}
 \end{enumerate}
 
 \section{Planificación temporal}
 
-{\large{}\label{sec:planificacion-temporal}}{\large\par}
+{\large{}{}\label{sec:planificacion-temporal}}{\large\par}
 
-{\large{}A mí me gusta que aquí pongáis una descripción de lo que
-os ha llevado realizar el trabajo. Hay gente que añade un diagrama
-de GANTT. Lo importante es que quede claro cuánto tiempo llevas (tiempo
-natural, p.ej., 6 meses) y a qué nivel de esfuerzo (p.ej., principalmente
-los fines de semana).}{\large\par}
+{\large{}{}En la realización del proyecto se ha seguido la siguiente
+cronología dividida en semanas, compajinando trabajo y proyecto han
+sido necesarios fines de semana para entregarlo a tiempo:}{\large\par}
 
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ESTADO DEL ARTE %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}
-
-{\large{}\cleardoublepage}{\large\par}
-
-\chapter{Estado del arte}
-
-{\large{}Descripción de las tecnologías que utilizas en tu trabajo.
-Con dos o tres párrafos por cada tecnología, vale. Se supone que aquí
-viene todo lo que no has hecho tú.}{\large\par}
-
-{\large{}Puedes citar libros, como el de Bonabeau et al. sobre procesos
-estigmérgicos~\cite{bonabeau:_swarm}. % Nota que el ~ añade un espacio en blanco, pero no deja que exista un salto de línea. Imprescindible ponerlo para las citas.}{\large\par}
-
-{\large{}También existe la posibilidad de poner notas al pie de página,
-por ejemplo, una para indicarte que visite la página de LibreSoft}\footnote{{\large{}\url{http://www.libresoft.es}}}{\large{}.}{\large\par}
-
-\section{Graphite}
-
-{\large{}\label{sec:Graphite}}{\large\par}
-
-{\large{}Graphite es una herramienta de monitorización válida tanto para infraestructuras
-físicas o cloud. Graphite se utiliza para realizar un seguimiento
-del rendimiento de sitios web, aplicaciones, servicios y servidores
-de red. Marcó el inicio de una nueva generación de herramientas de
-monitorización, haciendo más fácil almacenar, recuperar, compartir
-y visualizar datos de time-series.}{\large\par}
-
-{\large{}Graphite consiste en tres componentes software:}{\large\par}
-\begin{itemize}
-\item {\large{}Carbon: Servicio de alto rendimiento que escucha datos de
-time-series.}{\large\par}
-\item {\large{}Whisper: Biblioteca de base de datos simple para almacenar
-datos de time-series.}{\large\par}
-\item {\large{}Graphite-web: Interfaz de usuario y API para representar
-gráficos y paneles.}{\large\par}
-\end{itemize}
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img01-EstructuraGraphite}
-\caption{Estructura Graphite}
-\label{figura:Estructura_Graphite}}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img32-Cronologia}
+\caption{Cronologia}
+\label{fig:Cronologia-1}}
 \end{figure}
 {\large\par}
 
+{\large{}{}En la primera semana se instaló y configuró el hardware
+escogido, la fase más sencilla debido a que ya se poseía conocimiento
+del hardware utilizado (reutilizado) y se habían instalado mas servidores
+con dichas características y sistemas operativos. Después se decidieron
+las aplicaciones que iban a formar el sistema de monitorización, haciendo
+un análisis de las herramientas Open Source más potentes del mercado.
+A continuación, se instalaron y configuraron las herramientas Graphite
+y Grafana en un periodo de dos semanas seguido de la configuración
+de la base de datos. Llegados a estas fechas, se iniciaron las tareas
+principales y mas complejas, la creación de la lógica de la herramienta,
+el diseño de la misma y su posterior desarrollo, esta etapa duró aproximadamente
+mes y medio. Para finalizar, comenzó la puesta en marcha del sistema
+en la que aún continuamos aplicando un sistema DevOps.}{\large\par}
+
+{\large{}{} }
+\begin{figure}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img33-DevOps}
+\caption{Diagrama DevOps}
+\label{fig:DevOps}}
+\end{figure}
+{\large\par}
+
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ESTADO DEL ARTE %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}}{\large\par}
+
+{\large{}{}\cleardoublepage}{\large\par}
+
+\chapter{Estado del arte}
+
+{\large{}{} \label{chap:estado_del_arte}}{\large\par}
+
+\section{Graphite}
+
+{\large{}{}\label{sec:Graphite}}{\large\par}
+
+{\large{}{}Graphite es una herramienta de monitorización válida tanto
+para infraestructuras físicas o cloud. Graphite se utiliza para realizar
+un seguimiento del rendimiento de sitios web, aplicaciones, servicios
+y servidores de red. Marcó el inicio de una nueva generación de herramientas
+de monitorización, haciendo más fácil almacenar, recuperar, compartir
+y visualizar datos de time-series.}{\large\par}
+
+{\large{}{}Graphite consiste en tres componentes software:}{\large\par}
+
+{\large{} }{\large\par}
+\begin{itemize}
+\item {\large{}{}Carbon: Servicio de alto rendimiento que escucha datos
+de time-series.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Whisper: Biblioteca de base de datos simple para almacenar
+datos de time-series.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Graphite-web: Interfaz de usuario y API para representar
+gráficos y paneles.}{\large\par}
+
+{\large{} }{\large\par}
+\end{itemize}
+{\large{}{} }
+\begin{figure}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img01-EstructuraGraphite}
+\caption{Estructura Graphite}
+\label{figura:Estructura_Graphite} }
+\end{figure}
+{\large\par}
+
+
 \section{Grafana}
 
-{\large{}\label{sec:grafana}}{\large\par}
+{\large{}{}\label{sec:grafana}}{\large\par}
 
-{\large{}Grafana es un software libre basado en licencia de Apache
+{\large{}{}Grafana es un software libre basado en licencia de Apache
 2.0, que permite la visualización y el formato de métricas. Permite
 crear cuadros de mando y gráficos a partir de múltiples fuentes, incluidas
 bases de datos de time-series como Graphite o InfluxDB.}{\large\par}
 
-{\large{}Es una herramienta multiplataforma sin ninguna dependencia.
+{\large{}{}Es una herramienta multiplataforma sin ninguna dependencia.
 Está escrito en lenguaje Go y tiene un HTTP API completo. Ofrece al
 usuario multitud de posibilidades de forma muy intiutiva.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img02-AspectoGrafana}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img02-AspectoGrafana}
 \caption{Aspecto Grafana}
-\label{figura:Aspecto_Grafana}}
+\label{figura:Aspecto_Grafana} }
 \end{figure}
 {\large\par}
+
 
 \section{Django}
 
-{\large{}\label{sec:django}}{\large\par}
+{\large{}{}\label{sec:django}}{\large\par}
 
-{\large{}Django es un framework de aplicaciones web gratuito y de código
-abierto (open source) escrito en Python basado en el diseño Modelo-Vista-Template.}{\large\par}
+{\large{}{}Django es un framework de aplicaciones web gratuito y
+de código abierto (open source) escrito en Python basado en el diseño
+Modelo-Vista-Template.}{\large\par}
 
-{\large{}Diseñado para ayudar a los desarrolladores a llevar las aplicaciones
-desde el concepto hasta su finalización lo más rápido posible. Evitando
-muchos errores comunes de seguridad y ofreciendo una escalabilidad
-rápida y flexible.}{\large\par}
+{\large{}{}Diseñado para ayudar a los desarrolladores a llevar las
+aplicaciones desde el concepto hasta su finalización lo más rápido
+posible. Evitando muchos errores comunes de seguridad y ofreciendo
+una escalabilidad rápida y flexible.}{\large\par}
 
-{\large{}Otras características destacables son:}{\large\par}
+{\large{}{}Otras características destacables son:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}Un mapeador objeto-relacional.}{\large\par}
-\item {\large{}Aplicaciones \textquotedbl enchufables\textquotedbl{} que
+\item {\large{}{}Un mapeador objeto-relacional.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Aplicaciones \textquotedbl enchufables\textquotedbl{} que
 pueden instalarse en cualquier página gestionada con Django.}{\large\par}
-\item {\large{}Una API de base de datos robusta.}{\large\par}
-\item {\large{}Un sistema incorporado de \textquotedbl vistas genéricas\textquotedbl{}
+
+{\large{} }{\large\par}
+\item {\large{}{}Una API de base de datos robusta.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Un sistema incorporado de \textquotedbl vistas genéricas\textquotedbl{}
 que ahorra tener que escribir la lógica de ciertas tareas comunes.}{\large\par}
-\item {\large{}Un sistema extensible de plantillas basado en etiquetas,
+
+{\large{} }{\large\par}
+\item {\large{}{}Un sistema extensible de plantillas basado en etiquetas,
 con herencia de plantillas.}{\large\par}
-\item {\large{}Un despachador de URLs basado en expresiones regulares.}{\large\par}
-\item {\large{}Un sistema \textquotedbl middleware\textquotedbl{} para
+
+{\large{} }{\large\par}
+\item {\large{}{}Un despachador de URLs basado en expresiones regulares.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Un sistema \textquotedbl middleware\textquotedbl{} para
 desarrollar características adicionales.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img03-EsquemaInternoDjango}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img03-EsquemaInternoDjango}
 \caption{Esquema interno Django}
-\label{figura:Esquema_Interno_Django}}
+\label{figura:Esquema_Interno_Django} }
 \end{figure}
 {\large\par}
 
+
 \section{Python}
 
-{\large{}\label{sec:python}}{\large\par}
+{\large{}{}\label{sec:python}}{\large\par}
 
-{\large{}Lenguaje de programación interpretado cuya filosofía hace
+{\large{}{}Lenguaje de programación interpretado cuya filosofía hace
 hincapié en una sintaxis que favorezca un código legible haciendo
 más sencilla la colaboración. Soporta orientación a objetos, usa tipado
 dinámico y es multiplataforma. Es administrado por la Python Software
 Foundation y posee una licencia de código abierto, denominada Python
 Software Foundation License.}{\large\par}
 
-{\large{}Python es un lenguaje de programación multiparadigma, permite
-varios estilos:}{\large\par}
+{\large{}{}Python es un lenguaje de programación multiparadigma,
+permite varios estilos:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}Programación orientada a objetos.}{\large\par}
-\item {\large{}Programación imperativa.}{\large\par}
-\item {\large{}Programación funcional.}{\large\par}
+\item {\large{}{}Programación orientada a objetos.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Programación imperativa.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Programación funcional.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img04-CodigoPython}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img04-CodigoPython}
 \caption{Ejemplo código python}
-\label{figura:Ejemplo_Codigo_Python}}
+\label{figura:Ejemplo_Codigo_Python} }
 \end{figure}
 {\large\par}
 
+
 \section{Javascript}
 
-{\large{}\label{sec:javascript}}{\large\par}
+{\large{}{}\label{sec:javascript}}{\large\par}
 
-{\large{}Lenguaje de programación interpretado, orientado a objetos,
+{\large{}{}Lenguaje de programación interpretado, orientado a objetos,
 basado en prototipos, imperativo, débilmente tipado y dinámico. Implementado
 principalmente como parte de un navegador web permitiendo mejoras
 en la interfaz de usuario y páginas web dinámicas.}{\large\par}
 
-{\large{}Diseñado con una sintaxis similar a C. Aunque adopta nombres
+{\large{}{}Diseñado con una sintaxis similar a C. Aunque adopta nombres
 y convenciones del lenguaje de programación Java, tienen semánticas
 y propósitos diferentes. Todos los navegadores interpretan el código
 JavaScript integrado en las páginas web. Para interactuar con una
 página web se provee al lenguaje JavaScript de una implementación
 del DOM (Document Object Model).}{\large\par}
 
-{\large{}Utilizado en páginas web HTML para realizar operaciones y
-únicamente en el marco de la aplicación cliente, sin acceso a funciones
+{\large{}{}Utilizado en páginas web HTML para realizar operaciones
+y únicamente en el marco de la aplicación cliente, sin acceso a funciones
 del servidor. Actualmente es ampliamente utilizado para enviar y recibir
 información del servidor junto con ayuda de otras tecnologías como
 AJAX. JavaScript se interpreta en el agente de usuario al mismo tiempo
 que las sentencias van descargándose junto con el código HTML.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img05-CodigoJavascript}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img05-CodigoJavascript}
 \caption{Ejemplo código Javascript}
-\label{figura:Ejemplo_Codigo_Javascript}}
+\label{figura:Ejemplo_Codigo_Javascript} }
 \end{figure}
 {\large\par}
+
 
 \section{HTML5}
 
-{\large{}\label{sec:html5}}{\large\par}
+{\large{}{}\label{sec:html5}}{\large\par}
 
-{\large{}Quinta revisión del lenguaje de marcado básico de la web.
+{\large{}{}Quinta revisión del lenguaje de marcado básico de la web.
 HTML5 establece una serie de nuevos elementos y atributos que reflejan
 el uso típico de los sitios web modernos.}{\large\par}
 
-{\large{}Entre sus nuevas funcionalidades destacan:}{\large\par}
+{\large{}{}Entre sus nuevas funcionalidades destacan:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}Incorpora etiquetas (canvas 2D y 3D, audio, vídeo) con codecs
-para mostrar los contenidos multimedia.}{\large\par}
-\item {\large{}Etiquetas para manejar grandes conjuntos de datos: Datagrid,
+\item {\large{}{}Incorpora etiquetas (canvas 2D y 3D, audio, vídeo) con
+codecs para mostrar los contenidos multimedia.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Etiquetas para manejar grandes conjuntos de datos: Datagrid,
 Details, Menu y Command. Permiten generar tablas dinámicas que pueden
 filtrar, ordenar y ocultar contenido en cliente.}{\large\par}
-\item {\large{}Mejoras en los formularios.}{\large\par}
-\item {\large{}Drag \& Drop. Nueva funcionalidad para arrastrar objetos
+
+{\large{} }{\large\par}
+\item {\large{}{}Mejoras en los formularios.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Drag \& Drop. Nueva funcionalidad para arrastrar objetos
 como imágenes.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img06-EstructuraSemanticaHTML5}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img06-EstructuraSemanticaHTML5}
 \caption{Estructura semantica HTML5}
-\label{figura:Estructura_Semantica_HTML5}}
+\label{figura:Estructura_Semantica_HTML5} }
 \end{figure}
 {\large\par}
 
+
 \section{CSS3}
 
-{\large{}\label{sec:css3}}{\large\par}
+{\large{}{}\label{sec:css3}}{\large\par}
 
-{\large{}Lenguaje de diseño gráfico para definir y crear la presentación
+{\large{}{}Lenguaje de diseño gráfico para definir y crear la presentación
 de un documento estructurado escrito en un lenguaje de marcado.}{\large\par}
 
-{\large{}Diseñado principalmente para marcar la separación del contenido
-del documento y la forma de presentación de este, características
+{\large{}{}Diseñado principalmente para marcar la separación del
+contenido del documento y la forma de presentación de este, características
 tales como las capas, los colores y las fuentes. Esta separación busca
 mejorar la accesibilidad, proveer más flexibilidad y control en la
 especificación de características de presentación, permitir que varios
@@ -637,81 +753,84 @@ documentos HTML compartan un mismo estilo usando una sola hoja de
 estilos separada en un archivo .css, y reducir la complejidad y la
 repetición de código en la estructura del documento.}{\large\par}
 
-{\large{}La especificación CSS (Cascading Style Sheets) describe un
-esquema prioritario para determinar qué reglas de estilo se aplican
+{\large{}{}La especificación CSS (Cascading Style Sheets) describe
+un esquema prioritario para determinar qué reglas de estilo se aplican
 si más de una regla coincide para un elemento en particular. Estas
 reglas son aplicadas en cascada, de modo que las prioridades son calculadas
 y asignadas a las reglas.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img07-FormatoReglaCSS}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img07-FormatoReglaCSS}
 \caption{Formato reglas CSS}
-\label{figura:Formato_Regla_CSS}}
+\label{figura:Formato_Regla_CSS} }
 \end{figure}
 {\large\par}
 
+
 \section{MySQL}
 
-{\large{}\label{sec:mysql}}{\large\par}
+{\large{}{}\label{sec:mysql}}{\large\par}
 
-{\large{}Sistema de gestión de bases de datos relacional. Desarrollado
+{\large{}{}Sistema de gestión de bases de datos relacional. Desarrollado
 en su mayor parte en ANSI C y C++, MySQL es usado por muchos sitios
 web grandes y populares.}{\large\par}
 
-{\large{}Permite a los desarrolladores y diseñadores, realizar cambios
-en sus sitios de manera simple, con tan sólo cambiar un archivo, evitando
-tener que modificar todo el código web. Esto se debe a que trabaja
-con un sistema centralizado de gestión de datos, que permite realizar
-cambios en un solo archivo y que se ejecuta en toda la estructura
+{\large{}{}Permite a los desarrolladores y diseñadores, realizar
+cambios en sus sitios de manera simple, con tan sólo cambiar un archivo,
+evitando tener que modificar todo el código web. Esto se debe a que
+trabaja con un sistema centralizado de gestión de datos, que permite
+realizar cambios en un solo archivo y que se ejecuta en toda la estructura
 de datos que se comparte en la red.}{\large\par}
 
-%{\large{}}
+{\large{}%{\large{}}
 %\begin{figure}
 %{\large{}\centering \includegraphics[width=12cm]{img/img08-EstructuraMysql}
 %\caption{Ejemplo estructura Mysql}
 %\label{figura:Estructura_Mysql}}
 %\end{figure}
-%{\large\par}
+%{\large\par}}{\large\par}
 
 \section{API}
 
-{\large{}\label{sec:api}}{\large\par}
+{\large{}{}\label{sec:api}}{\large\par}
 
-{\large{}Interfaz de programación de aplicaciones, es un conjunto
+{\large{}{}Interfaz de programación de aplicaciones, es un conjunto
 de rutinas que provee acceso a funciones de un determinado software.}{\large\par}
 
-{\large{}Una API representa la capacidad de comunicación entre componentes
-de software. Se trata del conjunto de llamadas a ciertas bibliotecas
-que ofrecen acceso a ciertos servicios desde los procesos y representa
-un método para conseguir abstracción en la programación, generalmente
-entre los niveles o capas inferiores y los superiores del software.}{\large\par}
+{\large{}{}Una API representa la capacidad de comunicación entre
+componentes de software. Se trata del conjunto de llamadas a ciertas
+bibliotecas que ofrecen acceso a ciertos servicios desde los procesos
+y representa un método para conseguir abstracción en la programación,
+generalmente entre los niveles o capas inferiores y los superiores
+del software.}{\large\par}
 
-{\large{}Uno de los principales propósitos de una API es proporcionar
+{\large{}{}Uno de los principales propósitos de una API es proporcionar
 un conjunto de funciones de uso general. De esta forma, los programadores
 se benefician de las ventajas del API haciendo uso de su funcionalidad,
 evitándose el trabajo de programar todo desde el principio. Las API
 asimismo son abstractas: el software que proporciona una cierta API
 generalmente es llamado la implementación de esa API.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img09-ConexionesAPI}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img09-ConexionesAPI}
 \caption{Ejemplo de conexiones API}
-\label{figura:Conexiones_API}}
+\label{figura:Conexiones_API} }
 \end{figure}
 {\large\par}
 
+
 \section{Bootstrap}
 
-{\large{}\label{sec:api-1}}{\large\par}
+{\large{}{}\label{sec:api-1}}{\large\par}
 
-{\large{}Biblioteca de código abierto para diseño de sitios y aplicaciones
+{\large{}{}Biblioteca de código abierto para diseño de sitios y aplicaciones
 web. Contiene plantillas de diseño con tipografía, formularios, botones,
 cuadros, menús de navegación y otros elementos de diseño basado en
 HTML y CSS, así como extensiones de JavaScript adicionales.}{\large\par}
 
-{\large{}Bootstrap es compatible con la mayoría de los navegadores
+{\large{}{}Bootstrap es compatible con la mayoría de los navegadores
 web. Existe un concepto de compatibilidad parcial que hace disponible
 la información básica de un sitio web para todos los dispositivos
 y navegadores. Por ejemplo, las propiedades introducidas en CSS3 para
@@ -719,149 +838,196 @@ las esquinas redondeadas, gradientes y sombras son usadas por Bootstrap
 a pesar de la falta de soporte de navegadores antiguos. Esto extiende
 la funcionalidad de la herramienta, pero no es requerida para su uso.}{\large\par}
 
-{\large{}Bootstrap es de código abierto y está disponible en GitHub.
+{\large{}{}Bootstrap es de código abierto y está disponible en GitHub.
 A diferencia de muchos frameworks web, solo se ocupa del desarrollo
 front-end.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img10-PlantillaBootstrap}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img10-PlantillaBootstrap}
 \caption{Plantilla Bootstrap}
-\label{figura:Plantilla_Bootstrap}}
+\label{figura:Plantilla_Bootstrap} }
 \end{figure}
 {\large\par}
 
-{\large{}\cleardoublepage}{\large\par}
+{\large{}{}\cleardoublepage}{\large\par}
 
 \chapter{Diseño, implementación y Desarrollo}
 
+{\large{}{} \label{chap:Dise=0000F1o_implementacion_desarrollo}}{\large\par}
+
 \section{Hardware}
 
-{\large{}\label{sec:hardware}}{\large\par}
+{\large{}{}\label{sec:hardware}}{\large\par}
 
-{\large{}Por motivos económicos, se decide reutilizar el hardware de
-otra plataforma formada por tres servidores DELL PowerEdge R630.}{\large\par}
+{\large{}{}Por motivos económicos, se decide reutilizar el hardware
+de otra plataforma formada por tres servidores DELL PowerEdge R630.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img11-ServidorDELL}
+{\large{}{}\centering \includegraphics[width=9cm]{img/img11-ServidorDELL}
 \caption{DELL PowerEdge R630}
-\label{fig:Hardware_DELL} }
+\label{fig:Hardware_DELL}  }
 \end{figure}
 {\large\par}
 
-{\large{}Cuyas características técnicas se adecuan a las necesidades
+{\large{}{}Cuyas características técnicas se adecuan a las necesidades
 del proyecto:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}10 HDD.}{\large\par}
-\item {\large{}Intel® Xeon® E5-2620 v4 2.1GHz,20M Cache,8.0GT/s QPI,Turbo,HT,8C/16T
+\item {\large{}{}10 HDD.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Intel® Xeon® E5-2620 v4 2.1GHz,20M Cache,8.0GT/s QPI,Turbo,HT,8C/16T
 (85W) Max Mem 2133MHz.}{\large\par}
-\item {\large{}2 CPU hasta 120W.}{\large\par}
-\item {\large{}2666MT/s RDIMMs.}{\large\par}
-\item {\large{}32GB RDIMM 2666MT/s Dual Rank.}{\large\par}
-\item {\large{}Medida: 8x2.5\textquotedbl .Cuyas características técnicas
+
+{\large{} }{\large\par}
+\item {\large{}{}2 CPU hasta 120W.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}2666MT/s RDIMMs.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}32GB RDIMM 2666MT/s Dual Rank.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Medida: 8x2.5\textquotedbl .Cuyas características técnicas
 se adecuan a las necesidades del proyecto:}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}Otros detalles destacados que ofrece el hardware de DELL
+{\large{}{}Otros detalles destacados que ofrece el hardware de DELL
 son:}{\large\par}
+
 \begin{itemize}
-\item {\large{}Potencia de procesamiento: la generación más reciente de
-procesadores Intel® Xeon® da impulso a los entornos virtualizados
+\item {\large{}{}Potencia de procesamiento: la generación más reciente
+de procesadores Intel® Xeon® da impulso a los entornos virtualizados
 y a las aplicaciones de la empresa que necesitan el máximo rendimiento.}{\large\par}
-\item {\large{}Memoria de gran capacidad y bajo consumo: la memoria DDR4
+
+{\large{} }{\large\par}
+\item {\large{}{}Memoria de gran capacidad y bajo consumo: la memoria DDR4
 acelera las cargas de trabajo tales como la planificación de recursos
 para empresas y las aplicaciones de base de datos.}{\large\par}
-\item {\large{}Almacenamiento local ampliable y eficiente: la amplia variedad
-de opciones de almacenamiento en el servidor permite configuraciones
+
+{\large{} }{\large\par}
+\item {\large{}{}Almacenamiento local ampliable y eficiente: la amplia
+variedad de opciones de almacenamiento en el servidor permite configuraciones
 solo flash, soluciones híbridas con asignación de niveles de fábrica,
 plataformas de bajo coste con capacidad de gran densidad y un almacenamiento
 adecuado basado en servidor con todo lo que las aplicaciones necesitan
 para ofrecer el mejor valor y rendimiento.}{\large\par}
-\item {\large{}Gestión simplificada e inteligente: las herramientas de Dell
-OpenManage permiten empezar a producir en menos tiempo gracias al
-acceso local mejorado, nuevos dispositivos móviles para la supervisión
+
+{\large{} }{\large\par}
+\item {\large{}{}Gestión simplificada e inteligente: las herramientas de
+Dell OpenManage permiten empezar a producir en menos tiempo gracias
+al acceso local mejorado, nuevos dispositivos móviles para la supervisión
 segura del centro de datos desde dispositivos manuales y nuevos procesos
 automatizados que ahorran tiempo y dinero en las tareas cotidianas
 de operación y mantenimiento.}{\large\par}
-\item {\large{}Eficiencia energética: las tecnologías de alimentación y
-refrigeración innovadoras como Dell Fresh Air 2.0 permiten que los
+
+{\large{} }{\large\par}
+\item {\large{}{}Eficiencia energética: las tecnologías de alimentación
+y refrigeración innovadoras como Dell Fresh Air 2.0 permiten que los
 centros de datos funcionen a temperaturas constantes de hasta 40 °C/104
 °F.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}Partiendo de estos 3 servidores, se decide implementar la
-siguiente arquitectura física:}{\large\par}
+{\large{}{}Partiendo de estos 3 servidores, se decide implementar
+la siguiente arquitectura física:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}Un servidor para realizar backups.}{\large\par}
-\item {\large{}Un servidor para la base de datos de métricas (Graphite).}{\large\par}
-\item {\large{}Un servidor para la visualización y alerting (Grafana y Gralarmas).}{\large\par}
+\item {\large{}{}Un servidor para realizar backups.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Un servidor para la base de datos de métricas (Graphite).}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Un servidor para la visualización y alerting (Grafana
+y Gralarmas).}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}Todos ellos configurados en RAID 1 (mirror) duplicando en
-espejo todos los datos de cada unidad de forma sincronizada a una
+{\large{}{}Todos ellos configurados en RAID 1 (mirror) duplicando
+en espejo todos los datos de cada unidad de forma sincronizada a una
 unidad de duplicación exacta. De modo que, si se produce algún fallo
 o avería en alguna de las unidades, no se pierde ningún dato.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img12-EsquemaServidores}
+{\large{}{}\centering \includegraphics[width=9cm]{img/img12-EsquemaServidores}
 \caption{Esquema de servidores}
-\label{fig:Esquema_Servidores}}
+\label{fig:Esquema_Servidores} }
 \end{figure}
 {\large\par}
 
-{\large{}El sistema ofrece ambos tipos de escalabilidad:}{\large\par}
+{\large{}{}El sistema ofrece ambos tipos de escalabilidad:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}Escalabilidad vertical: añadir más recursos a un nodo particular
-del sistema mejora en conjunto.}{\large\par}
-\item {\large{}Escalabilidad horizontal: agregar más nodos mejora el rendimiento.}{\large\par}
+\item {\large{}{}Escalabilidad vertical: añadir más recursos a un nodo
+particular del sistema mejora en conjunto.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Escalabilidad horizontal: agregar más nodos mejora el
+rendimiento.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
 
 \section{Software}
 
-{\large{}\label{sec:software}}{\large\par}
+{\large{}{}\label{sec:software}}{\large\par}
 
-{\large{}El primer paso fue la decisión de los elementos software
+{\large{}{}El primer paso fue la decisión de los elementos software
 que cubrirán cada función:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}Solución almacenamiento: Como en todas las soluciones, se
-buscan entre todos los productos open source. Se compararon Elastichsearch,
+\item {\large{}{}Solución almacenamiento: Como en todas las soluciones,
+se buscan entre todos los productos open source. Se compararon Elastichsearch,
 InfluxDB, Graphite y Prometheus.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}}
+{\large{}{} }
 \begin{table}
-\centering{}{\large{}}%
+{\large{}\centering{}{}}%
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
- & {\large{}Elastichsearch} & {\large{}InfluxDB} & {\large{}Graphite} & {\large{}Prometheus}\tabularnewline
+ & {\large{}{}Elastichsearch } & {\large{}{}InfluxDB } & {\large{}{}Graphite } & {\large{}{}Prometheus}\tabularnewline
 \hline 
-{\large{}Licencias} & {\large{}Open Source} & {\large{}Open Source} & {\large{}Open Source} & {\large{}Open Source}\tabularnewline
+{\large{}{}Licencias } & {\large{}{}Open Source } & {\large{}{}Open Source } & {\large{}{}Open Source } & {\large{}{}Open Source}\tabularnewline
 \hline 
-{\large{}Intrusivo} & {\large{}Posibilidad de instalar agentes} & {\large{}No} & {\large{}No} & {\large{}Necesidad de instalar agente}\tabularnewline
+{\large{}{}Intrusivo } & {\large{}{}Posibilidad de instalar agentes } & {\large{}{}No } & {\large{}{}No } & {\large{}{}Necesidad de instalar agente}\tabularnewline
 \hline 
-{\large{}Escalabilidad} & {\large{}Si} & {\large{}Si} & {\large{}Si} & {\large{}Si}\tabularnewline
+{\large{}{}Escalabilidad } & {\large{}{}Si } & {\large{}{}Si } & {\large{}{}Si } & {\large{}{}Si}\tabularnewline
 \hline 
-{\large{}Tecnologías} & {\large{}Lucene, Java} & {\large{}Go, TSM} & {\large{}Python} & {\large{}Go}\tabularnewline
+{\large{}{}Tecnologías } & {\large{}{}Lucene, Java } & {\large{}{}Go, TSM } & {\large{}{}Python } & {\large{}{}Go}\tabularnewline
 \hline 
-{\large{}APIs y otros métodos de acceso} & {\large{}RESTful APIs, JSON API} & {\large{}HTTP API, JSON over UDP} & {\large{}HTTP API, JSON over UDP} & {\large{}RESTful, HTTP/JSON API}\tabularnewline
+{\large{}{}APIs y otros métodos de acceso } & {\large{}{}RESTful APIs, JSON API } & {\large{}{}HTTP API, JSON over UDP } & {\large{}{}HTTP API, JSON over UDP } & {\large{}{}RESTful, HTTP/JSON API}\tabularnewline
 \hline 
-{\large{}Formato de datos} & {\large{}Logs, Time-Series} & {\large{}Time-Series} & {\large{}Time-Series} & {\large{}Time-Series}\tabularnewline
+{\large{}{}Formato de datos } & {\large{}{}Logs, Time-Series } & {\large{}{}Time-Series } & {\large{}{}Time-Series } & {\large{}{}Time-Series}\tabularnewline
 \hline 
-{\large{}Métodos de particionamiento} & {\large{}Sharding} & {\large{}Sharding} & {\large{}-} & {\large{}Sharding}\tabularnewline
+{\large{}{}Métodos de particionamiento } & {\large{}{}Sharding } & {\large{}{}Sharding } & {\large{}{}- } & {\large{}{}Sharding}\tabularnewline
 \hline 
-{\large{}Métodos de replicación} & {\large{}Factor de replicación seleccionable} & {\large{}Factor de replicación seleccionable} & {\large{}-} & {\large{}Si}\tabularnewline
+{\large{}{}Métodos de replicación } & {\large{}{}Factor de replicación seleccionable } & {\large{}{}Factor de replicación seleccionable } & {\large{}{}- } & {\large{}{}Si}\tabularnewline
 \hline 
-{\large{}Cumple performance de ingesta} & {\large{}Si} & {\large{}Si} & {\large{}Si} & {\large{}Si}\tabularnewline
+{\large{}{}Cumple performance de ingesta } & {\large{}{}Si } & {\large{}{}Si } & {\large{}{}Si } & {\large{}{}Si}\tabularnewline
 \hline 
-{\large{}Conocimiento interno de la herramienta} & {\large{}-} & {\large{}-} & {\large{}Alto} & {\large{}-}\tabularnewline
+{\large{}{}Conocimiento interno de la herramienta } & {\large{}{}- } & {\large{}{}- } & {\large{}{}Alto } & {\large{}{}-}\tabularnewline
 \hline 
-{\large{}Soporte} & {\large{}Si} & {\large{}Si} & {\large{}No} & {\large{}No}\tabularnewline
+{\large{}{}Soporte } & {\large{}{}Si } & {\large{}{}Si } & {\large{}{}No } & {\large{}{}No}\tabularnewline
 \hline 
-\end{tabular}{\large{}\label{tabla:Comparativa_Almacenamiento} \caption{Comparativa Solución Almacenamiento}
-}
+\end{tabular}{\large{}{}\label{tabla:Comparativa_Almacenamiento} \caption{Comparativa Solución Almacenamiento}
+ }
 \end{table}
 {\large\par}
 
-{\large{}Inicialmente se descartaron Elasticsearch y Prometheus por
-funcionalidad, elasticsearch no está enfocado a análisis de time-series
+{\large{}{}Inicialmente se descartaron Elasticsearch y Prometheus
+por funcionalidad, elasticsearch no está enfocado a análisis de time-series
 sino de logs y Prometheus requiere de la instalación de un agente
 en los equipos remotos para la extracción de la información algo poco
 recomendado por algunos vendors. El debate surgió entre influxDB y
@@ -869,55 +1035,65 @@ Graphite, a pesar de que InfluxDB presentaba mejores prestaciones
 me decanté por Graphite debido a que se cubrían los requisitos de
 rendimiento y al mayor conocimiento interno de la herramienta, esto
 facilitará mucho la fase puesta en marcha y traspaso de conocimiento.}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}Solución capa de visualización: Se compararon las tres herramientas
-Open Source más potentes del mercado: Prometheus, Graphite y Grafana.}{\large\par}
+\item {\large{}{}Solución capa de visualización: Se compararon las tres
+herramientas Open Source más potentes del mercado: Prometheus, Graphite
+y Grafana.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}}
+{\large{}{} }
 \begin{table}
-\centering{}{\large{}}%
+{\large{}\centering{}{}}%
 \begin{tabular}{|c|c|c|c|}
 \hline 
- & {\large{}Grafana} & {\large{}Prometheus} & {\large{}Graphite}\tabularnewline
+ & {\large{}{}Grafana } & {\large{}{}Prometheus } & {\large{}{}Graphite}\tabularnewline
 \hline 
-{\large{}Compatibilidad con Graphite} & {\large{}Si} & {\large{}Si} & {\large{}Si}\tabularnewline
+{\large{}{}Compatibilidad con Graphite } & {\large{}{}Si } & {\large{}{}Si } & {\large{}{}Si}\tabularnewline
 \hline 
-{\large{}Aspecto} & {\large{}Sobresaliente} & {\large{}Notable} & {\large{}Pobre}\tabularnewline
+{\large{}{}Aspecto } & {\large{}{}Sobresaliente } & {\large{}{}Notable } & {\large{}{}Pobre}\tabularnewline
 \hline 
-{\large{}Plugins} & {\large{}Amplio abanico} & {\large{}Amplio abanico} & {\large{}Pobre}\tabularnewline
+{\large{}{}Plugins } & {\large{}{}Amplio abanico } & {\large{}{}Amplio abanico } & {\large{}{}Pobre}\tabularnewline
 \hline 
-{\large{}Configuración \textquotedblleft user friendly\textquotedblright{}} & {\large{}Si} & {\large{}No} & {\large{}No}\tabularnewline
+{\large{}{}Configuración ``user friendly'' } & {\large{}{}Si } & {\large{}{}No } & {\large{}{}No}\tabularnewline
 \hline 
-\end{tabular}{\large{}\label{tabla:Comparativa_Visualizacion} \caption{Comparativa Solución Capa Visualización}
-}
+\end{tabular}{\large{}{}\label{tabla:Comparativa_Visualizacion} \caption{Comparativa Solución Capa Visualización}
+ }
 \end{table}
 {\large\par}
 
-{\large{}Finalmente, Grafana fue la elegida debido a la multitud de
-opciones, su sencillez y su curva de aprendizaje.}{\large\par}
+{\large{}{}Finalmente, Grafana fue la elegida debido a la multitud
+de opciones, su sencillez y su curva de aprendizaje.}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}Solución alerting: debido a la carencia de grafana en el
-sistema de alerting (conocida en la decisión de la solución de la
-capa de visualización) se decidió desarrollar una aplicación interna
+\item {\large{}{}Solución alerting: debido a la carencia de grafana en
+el sistema de alerting (conocida en la decisión de la solución de
+la capa de visualización) se decidió desarrollar una aplicación interna
 basada en Django por conocimiento del framework.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}A continuación, se identificaron los flujos de datos y se
-decidieron los formatos de comunicación entre los distintos elementos
+{\large{}{}A continuación, se identificaron los flujos de datos y
+se decidieron los formatos de comunicación entre los distintos elementos
 de la solución:}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img13-Arquitectura}
+{\large{}{}\centering \includegraphics[width=9cm]{img/img13-Arquitectura}
 \caption{Arquitectura}
-\label{fig:Arquitectura}}
+\label{fig:Arquitectura} }
 \end{figure}
 {\large\par}
 
+
 \subsection{Graphite}
 
-{\large{}\label{subsec:graphite}}{\large\par}
+{\large{}{}\label{subsec:graphite}}{\large\par}
 
-{\large{}Una vez claro el diseño, se procedió a la implementación
+{\large{}{}Una vez claro el diseño, se procedió a la implementación
 de la solución de los distintos elementos. En la servidor de Graphite,
 además del aplicativo, se almacenarán scripts desarrollados en Python.
 Dichos scripts tendrán la función de conectarse a la red con diversos
@@ -928,157 +1104,179 @@ mostrada en la captura posterior, desarrollada para conectarse al
 carbon y almacenar en formato time-series el valor deseado en los
 whisper.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img14-ClaseCarbon}
+{\large{}{}\centering \includegraphics[width=9cm]{img/img14-ClaseCarbon}
 \caption{Clase Carbon}
-\label{fig:ClaseCarbon}}
+\label{fig:ClaseCarbon} }
 \end{figure}
 {\large\par}
+
 
 \subsection{Grafana}
 
-{\large{}\label{subsec:grafana}}{\large\par}
+{\large{}{}\label{subsec:grafana}}{\large\par}
 
-{\large{}La capa de visualización de Graphite (graphite-web) es pobre
-en funcionalidades y poco intuitiva, por ello se decidió utilizar
+{\large{}{}La capa de visualización de Graphite (graphite-web) es
+pobre en funcionalidades y poco intuitiva, por ello se decidió utilizar
 Grafana. En el mismo se configura el acceso a la base de datos (Graphite)
 de forma sencilla una vez abierta la conectividad entre los servidores.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img15-ConfGraphGrafana}
+{\large{}{}\centering \includegraphics[width=9cm]{img/img15-ConfGraphGrafana}
 \caption{Configuracion Graphite en Grafana}
-\label{fig:Configuracion_Graphite_Grafana}}
+\label{fig:Configuracion_Graphite_Grafana} }
 \end{figure}
 {\large\par}
 
+
 \subsection{Gralarmas}
 
-{\large{}\label{subsec:gralarmas}}{\large\par}
+{\large{}{}\label{subsec:gralarmas}}{\large\par}
 
-{\large{}Para cubrir la carencia de Grafana en el sistema de alertas
+{\large{}{}Para cubrir la carencia de Grafana en el sistema de alertas
 se desarrolla una web en interno. La cual se conecta mediante API
 HTTP a Grafana para extraer el formato de la métrica, los dashboards,
 los paneles,\dots{} y a Graphite para, con la información extraída
 de Grafana, consultar el valor de la métrica.}{\large\par}
 
-{\large{}En la fase de lógica y diseño decidí que el aplicativo permitirá
-configurar alarmas sobre las métricas, crear templates para agilizar
-aún más la definición de alarmas, listar las alarmas configuradas,
+{\large{}{}En la fase de lógica y diseño decidí que el aplicativo
+permitirá configurar alarmas sobre las métricas, crear templates para
+agilizar aún más la definición de alarmas, listar las alarmas configuradas,
 editar ajustes sobre las alarmas, mantener un histórico de alarmas,
 editar algunos ajustes del aplicativo y un dashboard en el que se
 muestran las alarmas activas.}{\large\par}
 
-{\large{}Los datos extraídos de ambas herramientas se almacenan en
-una base de datos MYSQL (models django) con la siguiente estructura:}{\large\par}
+{\large{}{}Los datos extraídos de ambas herramientas se almacenan
+en una base de datos MYSQL (models django) con la siguiente estructura:}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img16-EstructuraBBDD}
+{\large{}{}\centering \includegraphics[width=9cm]{img/img16-EstructuraBBDD}
 \caption{Estructura Base de Datos}
-\label{fig:Estructura_BBDD}}
+\label{fig:Estructura_BBDD} }
 \end{figure}
 {\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}alarmas\_ajustesalmacenados: donde se almacenan los ajustes
+\item {\large{}{}alarmas\_ajustesalmacenados: donde se almacenan los ajustes
 configurados.}{\large\par}
-\item {\large{}alarmas\_alarmas: donde se almacenan las alarmas activas.}{\large\par}
-\item {\large{}alarmas\_historicoalarmas: donde se almacenan las alarmas
+
+{\large{} }{\large\par}
+\item {\large{}{}alarmas\_alarmas: donde se almacenan las alarmas activas.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}alarmas\_historicoalarmas: donde se almacenan las alarmas
 cesadas.}{\large\par}
-\item {\large{}alarmas\_metricas: donde se almacenan las métricas configuradas
+
+{\large{} }{\large\par}
+\item {\large{}{}alarmas\_metricas: donde se almacenan las métricas configuradas
 con los umbrales.}{\large\par}
-\item {\large{}alarmas\_selecciones: relacionada con alarmas\_metricas.
+
+{\large{} }{\large\par}
+\item {\large{}{}alarmas\_selecciones: relacionada con alarmas\_metricas.
 Algunas métricas tienen opciones seleccionables, dichas opciones se
 almacenan en esta tabla.}{\large\par}
-\item {\large{}alarmas\_template: donde se almacena el nombre de los templates.}{\large\par}
-\item {\large{}alarmas\_templates: relacionada con alarmas\_template. Donde
-se almacenan los ajustes de cada template.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}alarmas\_template: donde se almacena el nombre de los
+templates.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}alarmas\_templates: relacionada con alarmas\_template.
+Donde se almacenan los ajustes de cada template.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=9cm]{img/img17-modelsDjango}
+{\large{}{}\centering \includegraphics[width=9cm]{img/img17-modelsDjango}
 \caption{Models Django}
-\label{fig:Models_Django}}
+\label{fig:Models_Django} }
 \end{figure}
 {\large\par}
 
-{\large{}Por detrás, se aplica una lógica de chequeo de estados de
-las alarmas en la que se comprobará cada 5 minutos si una métrica
+{\large{}{}Por detrás, se aplica una lógica de chequeo de estados
+de las alarmas en la que se comprobará cada 5 minutos si una métrica
 es alarmada siguiendo el siguiente diagrama:}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=16cm]{img/img18-DiagramaLogica}
+{\large{}{}\centering \includegraphics[width=16cm]{img/img18-DiagramaLogica}
 \caption{Diagrama Lógico}
-\label{fig:Diagrama_Logico}}
+\label{fig:Diagrama_Logico} }
 \end{figure}
 {\large\par}
+
 
 \subsection{Backup}
 
-{\large{}\label{subsec:backup}}{\large\par}
+{\large{}{}\label{subsec:backup}}{\large\par}
 
-{\large{}Se establecen en el servidor de backup procesos en el crontab
-de la máquina para hacer backup diarios a las 00:00 de la base de
-datos MySQL, de los archivos de configuración de los aplicativos Graphite
-y Grafana y del repositorio de scripts python.}{\large\par}
+{\large{}{}Se establecen en el servidor de backup procesos en el
+crontab de la máquina para hacer backup diarios a las 00:00 de la
+base de datos MySQL, de los archivos de configuración de los aplicativos
+Graphite y Grafana y del repositorio de scripts python.}{\large\par}
 
-{\large{}\cleardoublepage}{\large\par}
+{\large{}{}\cleardoublepage}{\large\par}
 
 \chapter{Resultados}
 
-{\large{}Los entornos de Grafana y Graphite se han estabilizado y
-se ha realizado un continuo proceso de \textquotedblleft fine tunning\textquotedblright{}
-de los aplicativos debido al incremento notable de métricas configuradas,
+{\large{}{} \label{chap:resultados}}{\large\par}
+
+{\large{}{}Los entornos de Grafana y Graphite se han estabilizado
+y se ha realizado un continuo proceso de ``fine tunning'' de los
+aplicativos debido al incremento notable de métricas configuradas,
 el uso de los usuarios y nuevas necesidades provenientes de la web
 Gralarmas.}{\large\par}
 
-{\large{}El aspecto final de la web de Gralarmas es una interfaz sencilla
-e intuitiva que cubre las necesidades del cliente. El diseño base
-consta de una barra de navegación horizontal (navbar) con la versión
-actual de software, el acceso a la administración de la web y un acceso
-a la ayuda; un panel de navegación a la izquierda (side-menu) en la
-que se muestra el acceso al dashboard, añadir métrica/alarma, metricas
-configuradas, templates, configurar alarmas, historial de alarmas
-y ajustes; y una zona central con el contenido dependiendo de la selección
-del menú.}{\large\par}
+{\large{}{}El aspecto final de la web de Gralarmas es una interfaz
+sencilla e intuitiva que cubre las necesidades del cliente. El diseño
+base consta de una barra de navegación horizontal (navbar) con la
+versión actual de software, el acceso a la administración de la web
+y un acceso a la ayuda; un panel de navegación a la izquierda (side-menu)
+en la que se muestra el acceso al dashboard, añadir métrica/alarma,
+metricas configuradas, templates, configurar alarmas, historial de
+alarmas y ajustes; y una zona central con el contenido dependiendo
+de la selección del menú.}{\large\par}
 
-{\large{}Cada opción del menú se implementa en el ulrs.py un enlace
+{\large{}{}Cada opción del menú se implementa en el ulrs.py un enlace
 y sus posibles extensiones, asociado a su vista correspondiente.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img19-urls}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img19-urls}
 \caption{urls.py}
-\label{fig:urls.py}}
+\label{fig:urls.py} }
 \end{figure}
 {\large\par}
 
-{\large{}En la página principal se muestra un \textquotedblleft Dashboard\textquotedblright{}
-distribuido como se ve en la imagen adjuntada a continuación. La parte
-superior es un resumen de las métricas configuradas (cuadrado verde),
-las alarmas warning (cuadrado azul), major (cuadrado amarillo) y criticas
-(cuadrado rojo). La parte inferior muestra un listado de las alarmas
-activas caracterizadas por: dashboard de grafana, nombre de la métrica,
-ultimo valor, estado (warning, major o critical) y la hora y fecha
-de inicio de la alarma. Finalmente, en el centro se mostrara la gráfica
-de la alarma que se seleccione o en su defecto la primera alarma,
-en el caso de no existir alarma como sucede en este caso, se muestra
-un error 404.}{\large\par}
+{\large{}{}En la página principal se muestra un ``Dashboard'' distribuido
+como se ve en la imagen adjuntada a continuación. La parte superior
+es un resumen de las métricas configuradas (cuadrado verde), las alarmas
+warning (cuadrado azul), major (cuadrado amarillo) y criticas (cuadrado
+rojo). La parte inferior muestra un listado de las alarmas activas
+caracterizadas por: dashboard de grafana, nombre de la métrica, ultimo
+valor, estado (warning, major o critical) y la hora y fecha de inicio
+de la alarma. Finalmente, en el centro se mostrara la gráfica de la
+alarma que se seleccione o en su defecto la primera alarma, en el
+caso de no existir alarma como sucede en este caso, se muestra un
+error 404.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img20-dashboard}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img20-dashboard}
 \caption{Dashboard}
-\label{fig:dashboard}}
+\label{fig:dashboard} }
 \end{figure}
 {\large\par}
 
-{\large{}La segunda opción es \textquotedblleft Añadir métrica/alarma\textquotedblright ,
-aquí se configurará la alarma en varios pasos: se seleccionará el
-dashboard equivalente a Grafana; se seleccionará el panel en el que
-se encuentra la métrica que queremos alarmar; se seleccionará la métrica/métricas
+{\large{}{}La segunda opción es ``Añadir métrica/alarma'', aquí
+se configurará la alarma en varios pasos: se seleccionará el dashboard
+equivalente a Grafana; se seleccionará el panel en el que se encuentra
+la métrica que queremos alarmar; se seleccionará la métrica/métricas
 que queremos configurar, variables si fueran necesarias y el tipo
 de alarma que queremos, si ya existiera un umbral configurado sobre
 esa métrica se mostraría un tick en la columna correspondiente. Una
@@ -1086,280 +1284,326 @@ vez seleccionado todo apretaríamos el botón azul y para finalizar
 la creación de la alarma, indicaremos los valores de los umbrales
 deseados para alarmas warning, major y critical.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img21-NuevaMetricaSeleccionDash}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img21-NuevaMetricaSeleccionDash}
 \caption{Selección Dashboard}
-\label{fig:Nueva_Metrica_Seleccion_Dashboard}}
+\label{fig:Nueva_Metrica_Seleccion_Dashboard} }
 \end{figure}
 {\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img22-NuevaMetricaSeleccionPanel}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img22-NuevaMetricaSeleccionPanel}
 \caption{Seleccion Panel}
-\label{fig:Nueva_Metrica_Seleccion_Panel}}
+\label{fig:Nueva_Metrica_Seleccion_Panel} }
 \end{figure}
 {\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img23-NuevaMetricaSeleccionMetrica}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img23-NuevaMetricaSeleccionMetrica}
 \caption{Seleccion Metrica}
-\label{fig:Nueva_Metrica_Seleccion_Metrica}}
+\label{fig:Nueva_Metrica_Seleccion_Metrica} }
 \end{figure}
 {\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img24-NuevaMetricaComboUmbrales}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img24-NuevaMetricaComboUmbrales}
 \caption{Combo Umbrales}
-\label{fig:Nueva_Metrica_Combo_Umbrales}}
+\label{fig:Nueva_Metrica_Combo_Umbrales} }
 \end{figure}
 {\large\par}
 
-{\large{}A continuación, se muestra la opción de \textquotedblleft Métricas
-configuradas\textquotedblright{} en el que se listarán las métricas/alarmas
-configuradas en una tabla. La tabla está formada por cinco columnas:
-dashboard, panel, métrica y dos columnas en las que se permite la
-edición de los umbrales de la métrica (circulo azul con lápiz en el
-interior) o la supresión de la misma (círculo rojo con x).}{\large\par}
+{\large{}{}A continuación, se muestra la opción de ``Métricas configuradas''
+en el que se listarán las métricas/alarmas configuradas en una tabla.
+La tabla está formada por cinco columnas: dashboard, panel, métrica
+y dos columnas en las que se permite la edición de los umbrales de
+la métrica (circulo azul con lápiz en el interior) o la supresión
+de la misma (círculo rojo con x).}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img25-ListadoMetricas}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img25-ListadoMetricas}
 \caption{Listado métricas configuradas}
-\label{fig:Listado_Metricas}}
+\label{fig:Listado_Metricas} }
 \end{figure}
 {\large\par}
 
-{\large{}En la opción de \textquotedblleft templates\textquotedblright{}
-se mostraran y configurarán los templates. En el cuadro de añadir
-nuevo template se añadirá el nombre y el número de parámetros necesarios.
-Dichos parámetros son el número de tipo de umbrales que queremos configurar.
-Para finalizar, seleccionaremos el botón de edición (circulo azul
-con líneas blancas) y configuraríamos los parámetros.}{\large\par}
+{\large{}{}En la opción de ``templates'' se mostraran y configurarán
+los templates. En el cuadro de añadir nuevo template se añadirá el
+nombre y el número de parámetros necesarios. Dichos parámetros son
+el número de tipo de umbrales que queremos configurar. Para finalizar,
+seleccionaremos el botón de edición (circulo azul con líneas blancas)
+y configuraríamos los parámetros.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img26-Templates}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img26-Templates}
 \caption{Vista principal templates}
-\label{fig:Templates}}
+\label{fig:Templates} }
 \end{figure}
 {\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img27-TemplatesCombo}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img27-TemplatesCombo}
 \caption{Combo parámetros templates}
-\label{fig:Templates_Combo_Parametros}}
+\label{fig:Templates_Combo_Parametros} }
 \end{figure}
 {\large\par}
 
-Una de las vistas más importantes es \textquotedblleft Configurar
-alarmas\textquotedblright , en ella se listan las alarmas permitiendo
-seleccionar las siguientes opciones para cada una de ellas:
+{\large{}Una de las vistas más importantes es ``Configurar alarmas'',
+en ella se listan las alarmas permitiendo seleccionar las siguientes
+opciones para cada una de ellas: }{\large\par}
 \begin{itemize}
-\item Envio SMS: True o False. Seleccionas si deseamos alertas a través
-de SMS.
-\item Envio OVO: True o False. Seleccionas si deseamos alertas a través
-de OVO (Herramienta interna).
-\item Checks alerta: número de veces que tiene que sobrepasar un valor el
-umbral para que la métrica sea alarmada.
-\item Checks OK: número de veces que tiene que sobrepasar un valor el umbral
-para que la métrica sea cesada.
-\item Periodo alerta: seleccionar periodo de activación. 24x7
-\item Periodo diurno.
-\item Margen OK (\%): porcentaje del umbral para garantizar el OK.
+\item {\large{}Envio SMS: True o False. Seleccionas si deseamos alertas
+a través de SMS. }{\large\par}
+\item {\large{}Envio OVO: True o False. Seleccionas si deseamos alertas
+a través de OVO (Herramienta interna). }{\large\par}
+\item {\large{}Checks alerta: número de veces que tiene que sobrepasar un
+valor el umbral para que la métrica sea alarmada. }{\large\par}
+\item {\large{}Checks OK: número de veces que tiene que sobrepasar un valor
+el umbral para que la métrica sea cesada. }{\large\par}
+\item {\large{}Periodo alerta: seleccionar periodo de activación. 24x7 }{\large\par}
+\item {\large{}Periodo diurno. }{\large\par}
+\item {\large{}Margen OK (\%): porcentaje del umbral para garantizar el
+OK. }{\large\par}
 \end{itemize}
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img28-ConfigurarAlarmas}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img28-ConfigurarAlarmas}
 \caption{Vista del configurador de alarmas}
-\label{fig:Configurar_Alarmas}}
+\label{fig:Configurar_Alarmas} }
 \end{figure}
 {\large\par}
 
-{\large{}En la vista de \textquotedblleft Alarmas históricas\textquotedblright{}
-se muestra un listado de las alarmas históricas. Dicha vista está
-formada por una tabla con siete columnas, dashboard, panel, métrica,
-el último dato con el que fue alarmado, estado, fecha y hora de inicio
-de la alarma y fecha y hora de fin de la alarma.}{\large\par}
+{\large{}{}En la vista de ``Alarmas históricas'' se muestra un
+listado de las alarmas históricas. Dicha vista está formada por una
+tabla con siete columnas, dashboard, panel, métrica, el último dato
+con el que fue alarmado, estado, fecha y hora de inicio de la alarma
+y fecha y hora de fin de la alarma.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img29-HistoricoAlarmas}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img29-HistoricoAlarmas}
 \caption{Vista de histórico alarmas}
-\label{fig:Historico_Alarmas}}
+\label{fig:Historico_Alarmas} }
 \end{figure}
 {\large\par}
 
-{\large{}Como última opción están los \textquotedblleft Ajustes\textquotedblright ,
-donde podremos rellenar modificar algunas configuraciones básicas:}{\large\par}
+{\large{}{}Como última opción están los ``Ajustes'', donde podremos
+rellenar modificar algunas configuraciones básicas:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}IP servidor grafana: IP del sevidor grafana con el que nos
-conectaremos.}{\large\par}
-\item {\large{}Puerto servidor grafana: puerto de grafana escuchando para
-establecer la comunicación.}{\large\par}
-\item {\large{}API key: key para atacar a la API de Grafana.}{\large\par}
-\item {\large{}Botón cargar BBDDs: actualizar la conectividad con el servidor
-de grafana.}{\large\par}
-\item {\large{}Modo visualización métricas: formato de visualización de
-las metricas. Alias, métrica completa o wildcard.}{\large\par}
-\item {\large{}Visualización rows: True o False. Mostrar la row de Grafana
+\item {\large{}{}IP servidor grafana: IP del sevidor grafana con el que
+nos conectaremos.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Puerto servidor grafana: puerto de grafana escuchando
+para establecer la comunicación.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}API key: key para atacar a la API de Grafana.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Botón cargar BBDDs: actualizar la conectividad con el
+servidor de grafana.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Modo visualización métricas: formato de visualización
+de las metricas. Alias, métrica completa o wildcard.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Visualización rows: True o False. Mostrar la row de Grafana
 a la que pertenece un panel.}{\large\par}
-\item {\large{}Periodo diurno: horas en las que se alertara si se selecciona
-la opción \textquotedblleft periodo diurno\textquotedblright{} en
-la configuración de la alarma.}{\large\par}
-\item {\large{}Método de envió: seleccionar si se va a indicar una lista
+
+{\large{} }{\large\par}
+\item {\large{}{}Periodo diurno: horas en las que se alertara si se selecciona
+la opción ``periodo diurno'' en la configuración de la alarma.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Método de envió: seleccionar si se va a indicar una lista
 telefónica o números.}{\large\par}
-\item {\large{}Teléfonos o lista: rellenar teléfono o listado.}{\large\par}
+
+\item {\large{}{}Teléfonos o lista: rellenar teléfono o listado.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
-{\large{}Cada uno de los formularios mostrados en las vistas previas
+{\large{}{}Cada uno de los formularios mostrados en las vistas previas
 forma parte de una clase en el forms.py.}{\large\par}
 
-{\large{}}
+{\large{}{} }
 \begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img31-Forms}
+{\large{}{}\centering \includegraphics[width=12cm]{img/img31-Forms}
 \caption{forms.py}
-\label{fig:Forms}}
+\label{fig:Forms} }
 \end{figure}
 {\large\par}
 
-{\large{}Para entregar dichos resultados se ha seguido la siguiente
-cronología dividida en semanas :}{\large\par}
-
-{\large{}}
-\begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img32-Cronologia}
-\caption{Cronologia}
-\label{fig:Cronologia}}
-\end{figure}
-{\large\par}
-
-{\large{}En la primera semana se instaló y configuró el hardware escogido,
-la fase más sencilla debido a que ya se poseía conocimiento del hardware
-utilizado (reutilizado) y se habían instalado mas servidores con dichas
-características y sistemas operativos. Después se decidieron las aplicaciones
-que iban a formar el sistema de monitorización, haciendo un análisis
-de las herramientas Open Source más potentes del mercado. A continuación,
-se instalaron y configuraron las herramientas Graphite y Grafana en
-un periodo de dos semanas seguido de la configuración de la base de
-datos. Llegados a estas fechas, se iniciaron las tareas principales
-y mas complejas, la creación de la lógica de la herramienta, el diseño
-de la misma y su posterior desarrollo, esta etapa duró aproximadamente
-mes y medio. Para finalizar, comenzó la puesta en marcha del sistema
-en la que aún continuamos aplicando un sistema DevOps.}{\large\par}
-
-{\large{}}
-\begin{figure}
-{\large{}\centering \includegraphics[width=12cm]{img/img33-DevOps}
-\caption{Diagrama DevOps}
-\label{fig:DevOps}}
-\end{figure}
-{\large\par}
-
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CONCLUSIONES %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}}{\large\par}
 
-{\large{}\cleardoublepage}{\large\par}
+{\large{}{}\cleardoublepage}{\large\par}
 
 \chapter{Conclusiones}
 
-{\large{}\label{chap:conclusiones}}{\large\par}
+{\large{}{}\label{chap:conclusiones}}{\large\par}
 
 \section{Consecución de objetivos}
 
-{\large{}\label{sec:consecucion-objetivos}}{\large\par}
+{\large{}{}\label{sec:consecucion-objetivos}}{\large\par}
 
-{\large{}Aunque continuamos con la puesta en marcha de la solución
+{\large{}{}Aunque continuamos con la puesta en marcha de la solución
 y con desarrollo y evolución continua, los objetivos se han cumplido
 con creces y el resultado es bastante satisfactorio. El proyecto se
 ha llevado a cabo en un tiempo límite de 3 meses, en el cual se han
 ido realizando entregas de valor al responsable a la finalización
 de cada objetivo.}{\large\par}
 
-{\large{}En el proyecto abordado se ha realizado las siguientes tareas:}{\large\par}
+{\large{}{}En el proyecto abordado se ha realizado las siguientes
+tareas:}{\large\par}
+
+{\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}Traslado e instalación hardware en CPD.}{\large\par}
-\item {\large{}Configuración hardware, instalación de sistema operativo
+\item {\large{}{}Traslado e instalación hardware en CPD.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Configuración hardware, instalación de sistema operativo
 e instalación de paquetes necesarios de los tres servidores.}{\large\par}
-\item {\large{}Instalación y configuración óptima de Grafana.}{\large\par}
-\item {\large{}Instalación y configuración óptima de Graphite.}{\large\par}
-\item {\large{}Revisión y apertura de conectividades entre servidores y
-con equipos remotos.}{\large\par}
-\item {\large{}Desarrollo de scripting en Python y documentación de los
+
+{\large{} }{\large\par}
+\item {\large{}{}Instalación y configuración óptima de Grafana.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Instalación y configuración óptima de Graphite.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Revisión y apertura de conectividades entre servidores
+y con equipos remotos.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Desarrollo de scripting en Python y documentación de los
 mismos.}{\large\par}
-\item {\large{}Desarrollo web en Django.}{\large\par}
-\item {\large{}Configuración de Backup.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Desarrollo web en Django.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Configuración de Backup.}{\large\par}
+
+{\large{} }{\large\par}
 \end{itemize}
 
 \section{Aplicación de lo aprendido}
 
-{\large{}\label{sec:aplicacion}}{\large\par}
+{\large{}{}\label{sec:aplicacion}}{\large\par}
 
-{\large{}Aquí viene lo que has aprendido durante el Grado/Máster y
-que has aplicado en el TFG/TFM. Una buena idea es poner las asignaturas
-más relacionadas y comentar en un párrafo los conocimientos y habilidades
-puestos en práctica.}{\large\par}
+{\large{}{}En esta sección se enumeran las asignaturas relacionadas
+y aplicadas en el proyecto:}{\large\par}
 \begin{enumerate}
-\item {\large{}a }{\large\par}
-\item {\large{}b }{\large\par}
+\item {\large{}{}Arquitectura de Internet: en ella recibió la formación
+básica en arquitecturas de protocolos en redes de ordenadores, centrádose
+en los protocolos TCP/IP, empleada en la realización del diseño y
+arquitectura de la solución.}{\large\par}
+
+\item {\large{}{}Informática I / II: aunque en estas asignaturas no se
+impartia ninguno de los lenguajes utilizados en el proyecto, sí se
+obtuvieron los conocimientos básicos de programación: tipos de datos,
+variables, control de flujo, ciclos, estructura de datos, funciones,...}{\large\par}
+
+\item {\large{}{}Protocolos para la Transmisión de Audio y Vídeo en Internet:
+aquí se aprendieron los principales elementos del proyecto, el lenguaje
+de programación Python y el framework Django.}{\large\par}
+
+\item {\large{}{}Sistemas Telemáticos para Medios Audiovisuales: esta asignatura
+completó la formación básica en el campo de las redes de ordenadores,
+las competencias y conocimientos adquiridos en Arquitectura de Internet,
+los refuerza y completa. En sus contenidos se incluye el estudio de
+los dispositivos de interconexión de redes, los protocolos de encaminamiento
+y la seguridad en redes de ordenadores empleados en el proyecto.}{\large\par}
 \end{enumerate}
 
 \section{Lecciones aprendidas}
 
-{\large{}\label{sec:lecciones_aprendidas}}{\large\par}
+{\large{}{}\label{sec:lecciones_aprendidas}}{\large\par}
 
-{\large{}En el presente proyecto se han adquirido las siguientes competencias
-profesionales:}{\large\par}
+{\large{}{}En el presente proyecto se han adquirido las siguientes
+competencias profesionales:}{\large\par}
+
 \begin{enumerate}
-\item {\large{}Mejora de conocimientos de Python.}{\large\par}
-\item {\large{}Mejora de conocimientos de Django.}{\large\par}
-\item {\large{}Mejora de conocimientos de Linux.}{\large\par}
-\item {\large{}Conocimiento sobre herramientas Open Source (Grafana y Graphite).}{\large\par}
-\item {\large{}Manejo de Bootstap.}{\large\par}
-\item {\large{}Elaboración de un documento técnico.}{\large\par}
+\item {\large{}{}Mejora de conocimientos de Python.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Mejora de conocimientos de Django.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Mejora de conocimientos de Linux.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Conocimiento sobre herramientas Open Source (Grafana y
+Graphite).}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Manejo de Bootstap.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Elaboración de un documento técnico.}{\large\par}
+
+{\large{} }{\large\par}
 \end{enumerate}
 
 \section{Trabajos futuros}
 
-{\large{}\label{sec:trabajos_futuros}}{\large\par}
+{\large{}{}\label{sec:trabajos_futuros}}{\large\par}
 
-{\large{}Ningún software se termina, así que aquí vienen ideas y funcionalidades
-que estaría bien tener implementadas en el futuro.}{\large\par}
+{\large{}{}Ningún proyecto software termina, como se hizo mención
+en la sección \ref{sec:planificacion-temporal} se esta aplicando
+metodología DevOps. Con una continua evolución del software según
+necesidades de cliente.}{\large\par}
 
-{\large{}Es un apartado que sirve para dar ideas de cara a futuros
-TFGs/TFMs.}{\large\par}
+{\large{}{}Algunos puntos de mejora identificados son:}{\large\par}
+\begin{itemize}
+\item {\large{}{}Redundancia local, redundancia dentro del mismo CPD pero
+en un rack distinto.}{\large\par}
 
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large{} }{\large\par}
+\item {\large{}{}Redundancia geográfica, redundancia en otro CPD.}{\large\par}
+
+\item {\large{}{}Análisis de logs, añadir la funcionalidad de analizar
+logs ademas de series de tiempo.}{\large\par}
+\end{itemize}
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % APÉNDICE(S) %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}}{\large\par}
 
-{\large{}\cleardoublepage}{\large\par}
+{\large{}{}\cleardoublepage}{\large\par}
 
 
 \appendix
-{\large{} %dummy comment inserted by tex2lyx to ensure that this paragraph is not empty
+{\large{}%dummy comment inserted by tex2lyx to ensure that this paragraph is not empty{}
+%dummy comment inserted by tex2lyx to ensure that this paragraph is not empty
 }{\large\par}
 
 \chapter{Manual de usuario}
 
-{\large{}\label{app:manual}}{\large\par}
+{\large{}{}\label{app:manual}}{\large\par}
 
-{\large{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAFIA %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\large\par}}{\large\par}
 
-{\large{}\cleardoublepage}{\large\par}
+{\large{}{}\cleardoublepage}{\large\par}
 
-{\large{}% Las siguientes dos instrucciones es todo lo que necesitas
+{\large{}{}% Las siguientes dos instrucciones es todo lo que necesitas
 % para incluir las citas en la memoria
- \bibliographystyle{abbrv}
+  \bibliographystyle{abbrv}
 \bibliography{memoria}
  % memoria.bib es el nombre del fichero que contiene
 % las referencias bibliográficas. Abre ese fichero y mira el formato que tiene,
@@ -1368,4 +1612,5 @@ TFGs/TFMs.}{\large\par}
 % y verás que lo puedes hacer de manera sencilla.
 % Más información: 
 % http://texblog.org/2014/04/22/using-google-scholar-to-download-bibtex-citations/}{\large\par}
+{document}}{\large\par}
 \end{document}
