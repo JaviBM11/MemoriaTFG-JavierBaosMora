@@ -59,8 +59,6 @@
 \usepackage{babel}
 \addto\shorthandsspanish{\spanishdeactivate{~<>}}
 
-
-
 \makeatother
 
 \usepackage{babel}
@@ -222,7 +220,7 @@ por ayudarme a escribir el final de este capítulo.}{\large\par}
 de red, con el objetivo de evitar o mitigar las consecuencias de los
 fallos de un equipo, logrando en algunos casos prevenir las incidencias
 antes de que estas sucedan. La solución es perfectamente aplicable
-a cualquier capa de red y y ha sido probada en la realidad.}{\large\par}
+a cualquier capa de red y ha sido probada en la realidad.}{\large\par}
 
 {\large{}{}El sistema está basado en tres módulos: base de datos,
 capa de visualización y módulo de alertas. Se probaron distintas soluciones
@@ -288,12 +286,13 @@ At present, the system is in continuous development adding new functionalities.}
 
 {\large{}{}Ejerciendo de becario en la empresa Orange España a media
 jornada en los departamentos de Despliegue Fijo y Planificación durante
-un año cuando me ofrecieron una nueva beca con objetivos más ambiciosos
-en el departamento de Operación y Mantenimiento. En la entrevista
-simplemente me indicaron que las capacidades que gustaban de mi eran
-los conocimientos sobre Python y Django, eso me hacía tener una idea
-de cuál sería mi función y acepte el nuevo reto. Novedoso y revolucionario,
-se planteaba una nueva forma de mantener la red.}{\large\par}
+un año me ofrecieron una nueva beca con objetivos más ambiciosos en
+el departamento de Operación y Mantenimiento. En la entrevista simplemente
+me indicaron que las capacidades que gustaban de mi eran los conocimientos
+sobre Python y Django, eso me hacía tener una idea de cuál sería mi
+función (anteriormente realizaba funciones de seguimiento económico)
+y acepte el nuevo reto. Novedoso y revolucionario, se planteaba una
+nueva forma de mantener la red.}{\large\par}
 
 {\large{}{}A mi llegada, se empleaban diversas herramientas de monitorización
 de diferentes }\emph{\large{}vendors}{\large{}. Estas eran cerradas,
@@ -302,29 +301,29 @@ incidencia surgía la necesidad de una herramienta ágil, la cual permitiera
 generar indicadores de gestión (KPIs) o monitorizar distintos sistemas
 en momentos concretos sin dependencias externas. En paralelo se estaba
 montando una solución a todos estos problemas basada en herramientas
-Open Source llamadas Graphite y Grafana con una carencia, la capa
-de }\emph{\large{}alterting}{\large{}. Cubrir esta carencia y ayudar
-a la implantación de dicha solución global era mi acometido.}{\large\par}
+Open Source llamadas Graphite y Grafana, con una carencia, la capa
+de }\emph{\large{}alterting}{\large{}. Cubrir esta carencia e implantar
+dicha solución global era mi acometido.}{\large\par}
 
 \section{Contexto}
 
 {\large{}{}\label{sec:contexto}}{\large\par}
 
 {\large{}{}Orange se caracteriza por tener una red muy compleja debido
-a las adquisiciones de distintas empresas (ya.com, amena, Jazztel,\dots )
-y, en consecuencia, sus redes. Por tanto, nos encontramos con una
-red heterogénea, multitud de equipos y }\emph{\large{}vendors}{\large{}
+a las adquisiciones de distintas empresas (ya.com, amena, Jazztel,
+Uni2\dots ) y, en consecuencia, sus redes. Por tanto, nos encontramos
+con una red muy heterogénea, multitud de equipos y }\emph{\large{}vendors}{\large{}
 con sus diferentes elementos de gestión y monitorización.}{\large\par}
 
 {\large{}{}Cada capa de red e incluso dentro de una misma capa se
-monitoriza de forma diferente y con un elemento distinto. Esto dificulta
+monitoriza de forma diferente y con un elemento distinto. Esto dificultaba
 la mucho el }\emph{\large{}troubleshooting}{\large{} entre capas,
 una visión E2E (End to End) de servicio e incluso los }\emph{\large{}post-mortem}{\large{}
 de las incidencias.}{\large\par}
 
 {\large{}{}La unificación y centralización de toda la información
 permitirá correlar alarmas de diversas capas de red sacando KPIs de
-servicio. Y cuando se identifique una degradación, se generarán alertas
+servicio. Cuando se identifique una degradación, se generarán alertas
 preventivas.}{\large\par}
 
 \section{Open Source}
@@ -332,33 +331,35 @@ preventivas.}{\large\par}
 {\large{}{}\label{sec:open-source}}{\large\par}
 
 {\large{}{}Sin presupuesto para el proyecto, más allá de mi contratación
-como becario, nos planteamos una solución desarrollada internamente
-basada en código abierto (Open Source). El código abierto es un modelo
-de desarrollo de software basado en la colaboración abierta. Se enfoca
+como becario, plantee una solución desarrollada internamente basada
+en código abierto (Open Source). El código abierto es un modelo de
+desarrollo de software basado en la colaboración abierta. Se enfoca
 más en los beneficios prácticos (acceso al código fuente) que en cuestiones
 éticas o de libertad que tanto se destacan en el software libre. Para
 muchos el término «libre» hace referencia al hecho de adquirir un
-software de manera gratuita. Además, el echo de estar respaldado por
-una comunidad garantiza la continua evolución de las herramientas
+software de manera gratuita. Además, el hecho de estar respaldado
+por una comunidad garantiza la continua evolución de las herramientas
 de una forma ágil.}{\large\par}
 
 {\large{}{}Las herramientas finalmente utilizadas fueron:}{\large\par}
 
 {\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}{}Graphite: fue diseñado y escrito originalmente por Chris
+\item {\large{}{}Graphite: Fue diseñado y escrito originalmente por Chris
 Davis en Orbitz en 2006 como un proyecto paralelo que finalmente se
 convirtió en su herramienta de monitorización fundamental. En 2008,
 Orbitz permitió que Graphite se lanzara bajo la licencia de código
 abierto Apache 2.0.}{\large\par}
 
 {\large{} }{\large\par}
-\item {\large{}{}Grafana: cuyos slogans ``The open platform for beautiful
+\item {\large{}{}Grafana: Cuyos slogans ``The open platform for beautiful
 analytics and monitoring'' y ``The leading open source software
-for time series analytics'' dan indicios sobre su filosofía.}{\large\par}
+for time series analytics'' dan indicios sobre su filosofía. Actualmente
+es la herramienta de monitorización y análisis de }\textit{\large{}time-series}{\large{}
+por excelencia.}{\large\par}
 
 {\large{} }{\large\par}
-\item {\large{}{}Django: framework escrito en Python de código abierto.}{\large\par}
+\item {\large{}{}Django: Framework escrito en Python de código abierto.}{\large\par}
 
 \end{itemize}
 
@@ -366,7 +367,7 @@ for time series analytics'' dan indicios sobre su filosofía.}{\large\par}
 
 {\large{}{}\label{sec:estructura}}{\large\par}
 
-{\large{}{}En esta sección se introduce la esctura de la memoria:}{\large\par}
+{\large{}{}En esta sección se introduce la esctructura de la memoria:}{\large\par}
 
 {\large{} }{\large\par}
 \begin{itemize}
@@ -375,7 +376,7 @@ una introducción del proyecto, poniendo en contexto y profundizando
 en la tecnología Open Source sobre la que esta basada el proyecto.}{\large\par}
 
 {\large{} }{\large\par}
-\item {\large{}{}En el capítulo~\ref{chap:objetivos} se muestra los objetivo
+\item {\large{}{}En el capítulo~\ref{chap:objetivos} se muestra el objetivo
 principal del proyecto y los específicos sobre los que se basó.}{\large\par}
 
 {\large{} }{\large\par}
@@ -460,14 +461,15 @@ de consulta y la flexibilidad para expandirlas y relacionar las tablas.}{\large\
 de la herramienta, tener claro el para, el qué y el cómo.}{\large\par}
 
 {\large{} }{\large\par}
-\item {\large{}{}Diseñare gráficamente la aplicación. Decidir el diseño
+\item {\large{}{}Diseñar gráficamente la aplicación. Decidir el diseño
 gráfico buscando siempre una aplicación sencilla, rápida e intuitiva.}{\large\par}
 
 {\large{} }{\large\par}
 \item {\large{}{}Poner en marcha la aplicación. Transferir a mantenimiento,
 procedimientos de backup y sesiones de formación de uso de la herramienta.
-Orange cuenta con una media de edad alta en la plantilla poco habituada
-a utilizar este tipo de aplicativos, entra un proceso de cambio cultural.}{\large\par}
+Tiene una dificultad adicional, Orange cuenta con una media de edad
+alta en la plantilla poco habituada a utilizar este tipo de aplicativos,
+entra un proceso de cambio cultural.}{\large\par}
 
 {\large{} }{\large\par}
 \end{enumerate}
@@ -477,8 +479,9 @@ a utilizar este tipo de aplicativos, entra un proceso de cambio cultural.}{\larg
 {\large{}{}\label{sec:planificacion-temporal}}{\large\par}
 
 {\large{}{}En la realización del proyecto se ha seguido la siguiente
-cronología dividida en semanas, compajinando trabajo y proyecto han
-sido necesarios fines de semana para entregarlo a tiempo:}{\large\par}
+cronología, dividida en semanas, compaginando trabajo y TFG han sido
+necesarios fines de semana para realizar los hitos en las fechas establecidas
+al inicio del mismo:}{\large\par}
 
 {\large{}{} }
 \begin{figure}
@@ -530,18 +533,18 @@ para infraestructuras físicas o cloud. Graphite se utiliza para realizar
 un seguimiento del rendimiento de sitios web, aplicaciones, servicios
 y servidores de red. Marcó el inicio de una nueva generación de herramientas
 de monitorización, haciendo más fácil almacenar, recuperar, compartir
-y visualizar datos de time-series.}{\large\par}
+y visualizar datos de }\textit{\large{}time-series}{\large{}.}{\large\par}
 
 {\large{}{}Graphite consiste en tres componentes software:}{\large\par}
 
 {\large{} }{\large\par}
 \begin{itemize}
 \item {\large{}{}Carbon: Servicio de alto rendimiento que escucha datos
-de time-series.}{\large\par}
+de }\textit{\large{}time-series}{\large{}.}{\large\par}
 
 {\large{} }{\large\par}
 \item {\large{}{}Whisper: Biblioteca de base de datos simple para almacenar
-datos de time-series.}{\large\par}
+datos de }\textit{\large{}time-series}{\large{}.}{\large\par}
 
 {\large{} }{\large\par}
 \item {\large{}{}Graphite-web: Interfaz de usuario y API para representar
@@ -585,7 +588,7 @@ usuario multitud de posibilidades de forma muy intiutiva.}{\large\par}
 {\large{}{}\label{sec:django}}{\large\par}
 
 {\large{}{}Django es un framework de aplicaciones web gratuito y
-de código abierto (open source) escrito en Python basado en el diseño
+de código abierto (Open Source) escrito en Python basado en el diseño
 Modelo-Vista-Template.}{\large\par}
 
 {\large{}{}Diseñado para ayudar a los desarrolladores a llevar las
@@ -1027,14 +1030,14 @@ InfluxDB, Graphite y Prometheus.}{\large\par}
 {\large\par}
 
 {\large{}{}Inicialmente se descartaron Elasticsearch y Prometheus
-por funcionalidad, elasticsearch no está enfocado a análisis de time-series
-sino de logs y Prometheus requiere de la instalación de un agente
-en los equipos remotos para la extracción de la información algo poco
-recomendado por algunos vendors. El debate surgió entre influxDB y
+por funcionalidad, Elasticsearch no está enfocado a análisis de }\textit{\large{}time-series}{\large{}
+sino a logs y Prometheus requiere de la instalación de un agente en
+los equipos remotos para la extracción de la información algo poco
+recomendado por algunos vendors. El debate surgió entre InfluxDB y
 Graphite, a pesar de que InfluxDB presentaba mejores prestaciones
 me decanté por Graphite debido a que se cubrían los requisitos de
 rendimiento y al mayor conocimiento interno de la herramienta, esto
-facilitará mucho la fase puesta en marcha y traspaso de conocimiento.}{\large\par}
+facilitará mucho la fase de puesta en marcha y traspaso de conocimiento.}{\large\par}
 
 {\large{} }{\large\par}
 \begin{itemize}
@@ -1069,7 +1072,7 @@ de opciones, su sencillez y su curva de aprendizaje.}{\large\par}
 
 {\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}{}Solución alerting: debido a la carencia de grafana en
+\item {\large{}{}Solución alerting: Debido a la carencia de grafana en
 el sistema de alerting (conocida en la decisión de la solución de
 la capa de visualización) se decidió desarrollar una aplicación interna
 basada en Django por conocimiento del framework.}{\large\par}
@@ -1094,15 +1097,15 @@ de la solución:}{\large\par}
 {\large{}{}\label{subsec:graphite}}{\large\par}
 
 {\large{}{}Una vez claro el diseño, se procedió a la implementación
-de la solución de los distintos elementos. En la servidor de Graphite,
+de la solución de los distintos elementos. En el servidor de Graphite,
 además del aplicativo, se almacenarán scripts desarrollados en Python.
 Dichos scripts tendrán la función de conectarse a la red con diversos
-protocolos (ssh, netconf, snmp,\dots ) para extraer información, la
-complejidad de los scripts dependerá del protocolo y pos procesado
+protocolos (ssh, netconf, snmp,\dots ) para extraer información. La
+complejidad de los scripts dependerá del protocolo y post procesado
 usado para cada elemento. Los scripts harán uso de una clase \ref{fig:ClaseCarbon},
 mostrada en la captura posterior, desarrollada para conectarse al
-carbon y almacenar en formato time-series el valor deseado en los
-whisper.}{\large\par}
+carbon y almacenar en formato }\textit{\large{}time-series}{\large{}
+el valor deseado en los whisper.}{\large\par}
 
 {\large{}{} }
 \begin{figure}
@@ -1142,11 +1145,11 @@ los paneles,\dots{} y a Graphite para, con la información extraída
 de Grafana, consultar el valor de la métrica.}{\large\par}
 
 {\large{}{}En la fase de lógica y diseño decidí que el aplicativo
-permitirá configurar alarmas sobre las métricas, crear templates para
-agilizar aún más la definición de alarmas, listar las alarmas configuradas,
-editar ajustes sobre las alarmas, mantener un histórico de alarmas,
-editar algunos ajustes del aplicativo y un dashboard en el que se
-muestran las alarmas activas.}{\large\par}
+permitirá: Configurar alarmas sobre las métricas, crear templates
+para agilizar aún más la definición de alarmas, listar las alarmas
+configuradas, editar ajustes sobre las alarmas, mantener un histórico
+de alarmas, editar algunos ajustes del aplicativo y un dashboard en
+el que se muestran las alarmas activas.}{\large\par}
 
 {\large{}{}Los datos extraídos de ambas herramientas se almacenan
 en una base de datos MYSQL (models django) con la siguiente estructura:}{\large\par}
@@ -1161,31 +1164,31 @@ en una base de datos MYSQL (models django) con la siguiente estructura:}{\large\
 
 {\large{} }{\large\par}
 \begin{itemize}
-\item {\large{}{}alarmas\_ajustesalmacenados: donde se almacenan los ajustes
+\item {\large{}{}alarmas\_ajustesalmacenados: Donde se almacenan los ajustes
 configurados.}{\large\par}
 
 {\large{} }{\large\par}
-\item {\large{}{}alarmas\_alarmas: donde se almacenan las alarmas activas.}{\large\par}
+\item {\large{}{}alarmas\_alarmas: Donde se almacenan las alarmas activas.}{\large\par}
 
 {\large{} }{\large\par}
-\item {\large{}{}alarmas\_historicoalarmas: donde se almacenan las alarmas
+\item {\large{}{}alarmas\_historicoalarmas: Donde se almacenan las alarmas
 cesadas.}{\large\par}
 
 {\large{} }{\large\par}
-\item {\large{}{}alarmas\_metricas: donde se almacenan las métricas configuradas
+\item {\large{}{}alarmas\_metricas: Donde se almacenan las métricas configuradas
 con los umbrales.}{\large\par}
 
 {\large{} }{\large\par}
-\item {\large{}{}alarmas\_selecciones: relacionada con alarmas\_metricas.
+\item {\large{}{}alarmas\_selecciones: Relacionada con alarmas\_metricas.
 Algunas métricas tienen opciones seleccionables, dichas opciones se
 almacenan en esta tabla.}{\large\par}
 
 {\large{} }{\large\par}
-\item {\large{}{}alarmas\_template: donde se almacena el nombre de los
+\item {\large{}{}alarmas\_template: Donde se almacena el nombre de los
 templates.}{\large\par}
 
 {\large{} }{\large\par}
-\item {\large{}{}alarmas\_templates: relacionada con alarmas\_template.
+\item {\large{}{}alarmas\_templates: Relacionada con alarmas\_template.
 Donde se almacenan los ajustes de cada template.}{\large\par}
 
 {\large{} }{\large\par}
@@ -1198,7 +1201,7 @@ Donde se almacenan los ajustes de cada template.}{\large\par}
 \end{figure}
 {\large\par}
 
-{\large{}{}Por detrás, se aplica una lógica de chequeo de estados
+{\large{}{}En segundo plano, se aplica una lógica de chequeo de estados
 de las alarmas en la que se comprobará cada 5 minutos si una métrica
 es alarmada siguiendo el siguiente diagrama:}{\large\par}
 
@@ -1216,9 +1219,9 @@ es alarmada siguiendo el siguiente diagrama:}{\large\par}
 {\large{}{}\label{subsec:backup}}{\large\par}
 
 {\large{}{}Se establecen en el servidor de backup procesos en el
-crontab de la máquina para hacer backup diarios a las 00:00 de la
+crontab de la máquina para hacer backups diarios a las 00:00 de la
 base de datos MySQL, de los archivos de configuración de los aplicativos
-Graphite y Grafana y del repositorio de scripts python.}{\large\par}
+Graphite y Grafana, de los whisper y del repositorio de scripts python.}{\large\par}
 
 {\large{}{}\cleardoublepage}{\large\par}
 
@@ -1227,23 +1230,23 @@ Graphite y Grafana y del repositorio de scripts python.}{\large\par}
 {\large{}{} \label{chap:resultados}}{\large\par}
 
 {\large{}{}Los entornos de Grafana y Graphite se han estabilizado
-y se ha realizado un continuo proceso de ``fine tunning'' de los
-aplicativos debido al incremento notable de métricas configuradas,
+y se ha realizado un continuo proceso de }\textit{\large{}fine tunning}{\large{}
+de los aplicativos debido al incremento notable de métricas configuradas,
 el uso de los usuarios y nuevas necesidades provenientes de la web
 Gralarmas.}{\large\par}
 
 {\large{}{}El aspecto final de la web de Gralarmas es una interfaz
 sencilla e intuitiva que cubre las necesidades del cliente. El diseño
-base consta de una barra de navegación horizontal (navbar) con la
-versión actual de software, el acceso a la administración de la web
-y un acceso a la ayuda; un panel de navegación a la izquierda (side-menu)
-en la que se muestra el acceso al dashboard, añadir métrica/alarma,
-metricas configuradas, templates, configurar alarmas, historial de
-alarmas y ajustes; y una zona central con el contenido dependiendo
-de la selección del menú.}{\large\par}
+base consta de una barra de navegación horizontal (}\textit{\large{}navbar}{\large{})
+con la versión actual de software, el acceso a la administración de
+la web y un acceso a la ayuda; un panel de navegación a la izquierda
+(}\textit{\large{}side-menu}{\large{}) en la que se muestra el acceso
+al dashboard, añadir métrica/alarma, metricas configuradas, templates,
+configurar alarmas, historial de alarmas y ajustes; y una zona central
+con el contenido dependiendo de la selección del menú.}{\large\par}
 
-{\large{}{}Cada opción del menú se implementa en el ulrs.py un enlace
-y sus posibles extensiones, asociado a su vista correspondiente.}{\large\par}
+{\large{}{}Cada opción del menú se implementa en el }\textit{\large{}ulrs.py}{\large{}
+un enlace y sus posibles extensiones, asociado a su vista correspondiente.}{\large\par}
 
 {\large{}{} }
 \begin{figure}
@@ -1253,17 +1256,17 @@ y sus posibles extensiones, asociado a su vista correspondiente.}{\large\par}
 \end{figure}
 {\large\par}
 
-{\large{}{}En la página principal se muestra un ``Dashboard'' distribuido
-como se ve en la imagen adjuntada a continuación. La parte superior
-es un resumen de las métricas configuradas (cuadrado verde), las alarmas
-warning (cuadrado azul), major (cuadrado amarillo) y criticas (cuadrado
-rojo). La parte inferior muestra un listado de las alarmas activas
-caracterizadas por: dashboard de grafana, nombre de la métrica, ultimo
-valor, estado (warning, major o critical) y la hora y fecha de inicio
-de la alarma. Finalmente, en el centro se mostrara la gráfica de la
-alarma que se seleccione o en su defecto la primera alarma, en el
-caso de no existir alarma como sucede en este caso, se muestra un
-error 404.}{\large\par}
+{\large{}{}En la página principal se muestra un }\textit{\large{}Dashboard}{\large{}
+distribuido como se ve en la imagen adjuntada a continuación. La parte
+superior es un resumen de las métricas configuradas (cuadrado verde),
+las alarmas warning (cuadrado azul), major (cuadrado amarillo) y criticas
+(cuadrado rojo). La parte inferior muestra un listado de las alarmas
+activas caracterizadas por: dashboard de grafana, nombre de la métrica,
+ultimo valor, estado (warning, major o critical) y la hora y fecha
+de inicio de la alarma. Finalmente, en el centro se mostrara la gráfica
+de la alarma que se seleccione o en su defecto la primera alarma,
+en el caso de no existir alarma como sucede en este caso, se muestra
+un error 404.}{\large\par}
 
 {\large{}{} }
 \begin{figure}
@@ -1433,7 +1436,7 @@ telefónica o números.}{\large\par}
 {\large{} }{\large\par}
 \end{itemize}
 {\large{}{}Cada uno de los formularios mostrados en las vistas previas
-forma parte de una clase en el forms.py.}{\large\par}
+forma parte de una clase en el }\textit{\large{}forms.py}{\large{}.}{\large\par}
 
 {\large{}{} }
 \begin{figure}
@@ -1460,9 +1463,10 @@ forma parte de una clase en el forms.py.}{\large\par}
 
 {\large{}{}Aunque continuamos con la puesta en marcha de la solución
 y con desarrollo y evolución continua, los objetivos se han cumplido
-con creces y el resultado es bastante satisfactorio. El proyecto se
-ha llevado a cabo en un tiempo límite de 3 meses, en el cual se han
-ido realizando entregas de valor al responsable a la finalización
+con creces y el resultado es bastante satisfactorio. Se ha conseguido
+un monitorización de la capa de PS novedosa y revolucionaria. El TFG
+se ha llevado a cabo en un tiempo límite de 3 meses, en el cual se
+han ido realizando entregas de valor al responsable a la finalización
 de cada objetivo.}{\large\par}
 
 {\large{}{}En el proyecto abordado se ha realizado las siguientes
@@ -1506,24 +1510,24 @@ mismos.}{\large\par}
 {\large{}{}En esta sección se enumeran las asignaturas relacionadas
 y aplicadas en el proyecto:}{\large\par}
 \begin{enumerate}
-\item {\large{}{}Arquitectura de Internet: en ella recibió la formación
-básica en arquitecturas de protocolos en redes de ordenadores, centrádose
+\item {\large{}{}Arquitectura de Internet: En ella se adquirieron las nociones
+básicas en arquitecturas de protocolos en redes de ordenadores, centrándose
 en los protocolos TCP/IP, empleada en la realización del diseño y
 arquitectura de la solución.}{\large\par}
 
-\item {\large{}{}Informática I / II: aunque en estas asignaturas no se
-impartia ninguno de los lenguajes utilizados en el proyecto, sí se
+\item {\large{}{}Informática I / II: Aunque en estas asignaturas no se
+impartía ninguno de los lenguajes utilizados en el proyecto, sí se
 obtuvieron los conocimientos básicos de programación: tipos de datos,
 variables, control de flujo, ciclos, estructura de datos, funciones,...}{\large\par}
 
 \item {\large{}{}Protocolos para la Transmisión de Audio y Vídeo en Internet:
-aquí se aprendieron los principales elementos del proyecto, el lenguaje
-de programación Python y el framework Django.}{\large\par}
+A lo largo de la asignatura se aprendieron los principales elementos
+del proyecto, el lenguaje de programación Python y el framework Django.}{\large\par}
 
-\item {\large{}{}Sistemas Telemáticos para Medios Audiovisuales: esta asignatura
+\item {\large{}{}Sistemas Telemáticos para Medios Audiovisuales: Esta asignatura
 completó la formación básica en el campo de las redes de ordenadores,
 las competencias y conocimientos adquiridos en Arquitectura de Internet,
-los refuerza y completa. En sus contenidos se incluye el estudio de
+los refuerzó y completó. En sus contenidos se incluye el estudio de
 los dispositivos de interconexión de redes, los protocolos de encaminamiento
 y la seguridad en redes de ordenadores empleados en el proyecto.}{\large\par}
 \end{enumerate}
@@ -1576,6 +1580,13 @@ en un rack distinto.}{\large\par}
 
 \item {\large{}{}Análisis de logs, añadir la funcionalidad de analizar
 logs ademas de series de tiempo.}{\large\par}
+
+{\large{} }{\large\par}
+\item {\large{}{}Dockerizar la solución, hacer la solución mas potente
+y flexible añadiendo dockers.}{\large\par}
+
+\item {\large{}{}Agregación de alarmas y machine learning, añadir lógicas
+mas potentes.}{\large\par}
 \end{itemize}
 {\large{}{}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
